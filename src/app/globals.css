@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  /* Arka planı lüks bir bej yapıyoruz, siyah mod özelliğini sildik */
+  --background: #fdfbf7; 
+  --foreground: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Ana Renkler */
+  --color-medical-primary: #0054a6;
+  --color-medical-secondary: #00a9e0;
+}
+
+/* Next.js varsayılanlarını sıfırlıyoruz */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  /* Fontu layout.tsx'te Jost olarak tanımladığımız için burada otomatikleşecek */
+}
