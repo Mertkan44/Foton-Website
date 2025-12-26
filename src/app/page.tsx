@@ -32,7 +32,7 @@ export default function Home() {
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="absolute bottom-0 left-0 right-0 h-[60vh] bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7] via-20% to-transparent z-20 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-[30vh] bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7] via-50% to-transparent z-20 pointer-events-none" />
       </div>
 
       {/* 2. MASAÜSTÜ VİDEO */}
