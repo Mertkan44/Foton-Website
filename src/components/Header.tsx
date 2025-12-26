@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/components/LanguageContext";
-// YENİ: Merkezi dosyadan çekiyoruz
 import { translations } from "@/utils/translations";
 
 const Header = () => {
@@ -11,7 +10,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { lang, setLang } = useLanguage();
   
-  // YENİ: Sözlüğü buradan alıyoruz
   const t = translations[lang].nav; 
 
   useEffect(() => {
@@ -19,6 +17,16 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Mobil menü açıldığında sayfayı kilitle
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isOpen]);
 
   const menuItems = [
     { name: t.equipment, href: "/equipment" },
@@ -38,7 +46,7 @@ const Header = () => {
         flex justify-between items-center border border-black/5
       `}>
         
-        <Link href="/" className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0 z-[110]">
           <Image src="/logo.svg" alt="Foton SC Logo" width={140} height={40} className={`object-contain transition-all duration-300 ${isScrolled ? "h-7 md:h-10" : "h-8 md:h-14"} w-auto`} priority />
         </Link>
 
@@ -71,17 +79,23 @@ const Header = () => {
         </button>
       </nav>
 
-      <div className={`fixed inset-0 bg-[#fdfbf7] z-[105] transition-all duration-500 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible translate-x-full"}`}>
-        <div className="flex flex-col h-full p-10 pt-36">
-          <div className="flex gap-4 mb-8">
+      <div className={`fixed inset-0 bg-[#fdfbf7] z-[105] transition-all duration-500 overflow-y-auto ${isOpen ? "opacity-100 visible" : "opacity-0 invisible translate-x-full"}`}>
+        <div className="flex flex-col min-h-full p-8 pt-32 pb-10">
+          <div className="flex justify-center gap-4 mb-10">
              {(["tr", "en", "bg"] as const).map((l) => (
-              <button key={l} onClick={() => setLang(l)} className={`px-4 py-2 rounded-lg text-lg font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white" : "bg-slate-200 text-slate-500"}`}>{l}</button>
+              <button key={l} onClick={() => setLang(l)} className={`px-6 py-3 rounded-xl text-lg font-black uppercase transition-all shadow-sm ${lang === l ? "bg-[#0054a6] text-white scale-105" : "bg-white text-slate-400 border border-slate-100"}`}>{l}</button>
             ))}
           </div>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-6 text-center">
             {menuItems.map((item) => (
-              <Link key={item.href} href={item.href} className="text-5xl font-black text-[#1e293b]" onClick={() => setIsOpen(false)}>{item.name}</Link>
+              <Link key={item.href} href={item.href} className="text-4xl font-black text-[#1e293b] hover:text-[#0054a6] transition-colors" onClick={() => setIsOpen(false)}>{item.name}</Link>
             ))}
+          </div>
+          {/* EKSİK OLAN BUTON BURAYA EKLENDİ */}
+          <div className="mt-12 flex justify-center">
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="bg-[#0054a6] text-white w-full max-w-xs py-5 rounded-2xl font-bold text-xl text-center shadow-xl hover:bg-[#1e293b] transition-all">
+              {t.btn}
+            </Link>
           </div>
         </div>
       </div>
