@@ -23,3 +23,24 @@ body {
   padding: 0;
   /* Fontu layout.tsx'te Jost olarak tanımladığımız için burada otomatikleşecek */
 }
+
+/* Mobil videoda play butonunu gizle */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
