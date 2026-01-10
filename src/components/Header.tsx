@@ -9,8 +9,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const { lang, setLang } = useLanguage();
-  
-  const t = translations[lang as keyof typeof translations].nav; 
+
+  const t = translations[lang as keyof typeof translations].nav;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <header className="fixed w-full z-[100] pt-4 md:pt-10 px-5 md:px-6 transition-all duration-500">
       <nav className={`mx-auto max-w-[1440px] flex justify-between items-center border border-black/5 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-3 lg:py-6 px-6 md:px-10 rounded-full lg:scale-[0.95] scale-100" : "bg-white py-4 lg:py-7 px-6 md:px-12 rounded-full shadow-md lg:scale-100 scale-100"}`}>
-        <Link href="/" className="z-[110]"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-12" priority /></Link>
+        <Link href="/" className="z-[110] cursor-pointer block"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-12" priority /></Link>
 
         {/* Masaüstü Menü */}
         <div className="hidden lg:flex items-center gap-10">
@@ -80,7 +80,7 @@ const Header = () => {
       <div className={`fixed inset-0 bg-[#fdfbf7] z-[105] transition-all duration-500 overflow-y-auto overscroll-none ${isOpen ? "opacity-100 visible" : "opacity-0 invisible translate-x-full"}`}>
         {/* Mobil Menü Header */}
         <div className="flex justify-between items-center px-5 pt-4 pb-4 border-b border-slate-100">
-          <Link href="/" onClick={() => setIsOpen(false)} className="z-[110]">
+          <Link href="/" onClick={() => setIsOpen(false)} className="z-[110] cursor-pointer block">
             <Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8" priority />
           </Link>
           <button className="p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(false)}>

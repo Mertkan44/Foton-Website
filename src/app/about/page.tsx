@@ -56,7 +56,7 @@ export default function AboutPage() {
             {/* 2. OUR STORY */}
             <section className="py-20 md:py-32">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
                         <div className="w-full lg:w-1/2">
                             <FadeIn>
                                 <span className="text-[#0054a6] font-bold uppercase tracking-[0.2em] text-sm mb-6 block">

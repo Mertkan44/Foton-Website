@@ -3,6 +3,9 @@ import { Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import GlobalWhatsApp from "@/components/GlobalWhatsApp";
+import CookieConsent from "@/components/CookieConsent";
+import Footer from "@/components/Footer";
+import HtmlLangUpdater from "@/components/HtmlLangUpdater";
 import { LanguageProvider } from "@/components/LanguageContext";
 
 const jost = Jost({
@@ -22,11 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body
         className={`${jost.className} antialiased bg-[#fcfcfc] text-[#1e293b]`}
       >
         <LanguageProvider>
+          <HtmlLangUpdater />
           {/* Menü */}
           <Header />
 
@@ -37,6 +41,12 @@ export default function RootLayout({
 
           {/* --- WHATSAPP BUTONU (Global, Contact dışı sayfalarda görünür) --- */}
           <GlobalWhatsApp />
+
+          {/* --- FOOTER (Global) --- */}
+          <Footer />
+
+          {/* --- COOKIE CONSENT --- */}
+          <CookieConsent />
 
         </LanguageProvider>
       </body>

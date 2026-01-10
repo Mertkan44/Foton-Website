@@ -53,6 +53,7 @@ export const translations = {
         q3: "Is insurance included in logistics?", a3: "Yes, all our transportation and logistics services include comprehensive insurance for medical high-end devices."
       }
     },
+    cookie: { text: "We use cookies to ensure you get the best experience on our website. By continuing to browse, you agree to our use of cookies.", accept: "Accept All", decline: "Decline" },
     footer: { desc: "Technical excellence in medical solutions.", t1: "Solutions", t2: "Company", t3: "Support", support: "Available 24/7.", copy: "© 2025 Foton SC. All rights reserved." }
   },
   tr: {
@@ -109,6 +110,7 @@ export const translations = {
         q3: "Lojistiğe sigorta dahil mi?", a3: "Evet, tüm nakliye ve lojistik hizmetlerimiz, üst düzey tıbbi cihazlar için kapsamlı sigortayı içerir."
       }
     },
+    cookie: { text: "Web sitemizde size en iyi deneyimi sunmak için çerezleri kullanıyoruz. Gezinmeye devam ederek çerez kullanımımızı kabul etmiş olursunuz.", accept: "Kabul Et", decline: "Reddet" },
     footer: { desc: "Medikal çözümlerde teknik mükemmellik.", t1: "Çözümler", t2: "Kurumsal", t3: "Destek", support: "7/24 hizmetinizdeyiz.", copy: "© 2025 Foton SC. Tüm hakları saklıdır." }
   },
   de: {
@@ -165,6 +167,7 @@ export const translations = {
         q3: "Ist eine Versicherung in der Logistik enthalten?", a3: "Ja, alle unsere Transport- und Logistikdienstleistungen beinhalten eine umfassende Versicherung für hochwertige medizinische Geräte."
       }
     },
+    cookie: { text: "Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten. Durch die weitere Nutzung stimmen Sie unserer Verwendung von Cookies zu.", accept: "Akzeptieren", decline: "Ablehnen" },
     footer: { desc: "Technische Exzellenz in der Medizintechnik.", t1: "Lösungen", t2: "Firma", t3: "Support", support: "24/7 Support.", copy: "© 2025 Foton SC. Alle Rechte vorbehalten." }
   },
   es: {
@@ -221,6 +224,7 @@ export const translations = {
         q3: "¿El seguro está incluido en la logística?", a3: "Sí, todos nuestros servicios de transporte y logística incluyen un seguro a todo riesgo para dispositivos médicos de alta gama."
       }
     },
+    cookie: { text: "Utilizamos cookies para asegurarnos de que obtenga la mejor experiencia en nuestro sitio web. Al continuar navegando, acepta nuestro uso de cookies.", accept: "Aceptar", decline: "Rechazar" },
     footer: { desc: "Excelencia técnica en soluciones médicas.", t1: "Soluciones", t2: "Empresa", t3: "Soporte", support: "Disponible 24/7.", copy: "© 2025 Foton SC. Todos los derechos reservados." }
   },
   ru: {
@@ -277,6 +281,7 @@ export const translations = {
         q3: "Включена ли страховка в логистику?", a3: "Да, все наши транспортные и логистические услуги включают полное страхование дорогостоящего медицинского оборудования."
       }
     },
+    cookie: { text: "Мы используем файлы cookie, чтобы обеспечить вам лучший опыт на нашем веб-сайте. Продолжая просматривать, вы соглашаетесь с нашим использованием файлов cookie.", accept: "Принять", decline: "Отклонить" },
     footer: { desc: "Техническое совершенство в медицине.", t1: "Решения", t2: "Компания", t3: "Поддержка", support: "Доступны 24/7.", copy: "© 2025 Foton SC. Все права защищены." }
   }
 };
