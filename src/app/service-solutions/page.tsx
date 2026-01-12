@@ -38,13 +38,13 @@ export default function ServiceSolutions() {
             {/* Services Grid */}
             <section className="py-20 px-6">
                 <div className="container mx-auto max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="flex flex-wrap justify-center gap-8">
 
                         {services.map((service) => {
                             // @ts-ignore
                             const serviceInfo = t[service.id];
                             return (
-                                <Link key={service.id} href={`/service-solutions/${service.id}`} className="group block h-full">
+                                <Link key={service.id} href={`/service-solutions/${service.id}`} className="group block w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]">
                                     <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform hover:-translate-y-2">
 
                                         {/* Image Container */}

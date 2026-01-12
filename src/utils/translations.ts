@@ -80,8 +80,30 @@ export const translations = {
       }
     },
     installPage: {
-      title: "Project Management Solutions",
-      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+      title: "Installation & Dismantling",
+      subtitle: "Professional project management solutions for medical imaging systems.",
+      services: {
+        installation: {
+          title: "Installation & Dismantling",
+          desc: "Expert installation and dismantling services for all major medical imaging brands.",
+          items: ["Device Dismantling", "System Installation", "Mechanical Assembly", "Cabling & Connection"]
+        },
+        logistics: {
+          title: "Logistics & Transport",
+          desc: "Specialized transportation and handling for sensitive medical equipment.",
+          items: ["Device Transport", "Specialized Crating", "International Logistics", "Insurance & Customs"]
+        },
+        planning: {
+          title: "Site Planning & Construction",
+          desc: "Comprehensive site preparation and architectural planning for imaging suites.",
+          items: ["Hospital Construction Planning", "Site Feasibility", "Architectural Drawings", "Power & Cooling Requirements"]
+        },
+        rf: {
+          title: "RF Shielding Solutions",
+          desc: "Advanced RF cabin installation and shielding for MRI safety and signal integrity.",
+          items: ["RF Cabin Assembly", "Shielding Integrity Testing", "Copper Cage Installation", "Magnetic Shielding"]
+        }
+      }
     }
   },
   tr: {
@@ -165,8 +187,30 @@ export const translations = {
       }
     },
     installPage: {
-      title: "Proje Yönetimi Çözümleri",
-      items: ["Cihaz demontaj", "Cihaz taşıma", "Kurulum", "Lojistik", "Hastaneler için inşaat planlamaları", "Saha planlama", "RF Kabini montajı"]
+      title: "Montaj ve Demontaj",
+      subtitle: "Tıbbi görüntüleme sistemleri için profesyonel proje yönetimi çözümleri.",
+      services: {
+        installation: {
+          title: "Montaj ve Demontaj",
+          desc: "Tüm büyük tıbbi görüntüleme markaları için uzman montaj ve demontaj hizmetleri.",
+          items: ["Cihaz Demontajı", "Sistem Kurulumu", "Mekanik Montaj", "Kablolama ve Bağlantı"]
+        },
+        logistics: {
+          title: "Lojistik ve Taşıma",
+          desc: "Hassas tıbbi ekipmanlar için özel taşıma ve elleçleme çözümleri.",
+          items: ["Cihaz Taşıma", "Özel Paketleme", "Uluslararası Lojistik", "Sigorta ve Gümrük"]
+        },
+        planning: {
+          title: "Saha Planlama ve İnşaat",
+          desc: "Görüntüleme odaları için kapsamlı saha hazırlığı ve mimari planlama.",
+          items: ["Hastane İnşaat Planlaması", "Saha Uygunluk Analizi", "Mimari Çizimler", "Güç ve Soğutma Gereksinimleri"]
+        },
+        rf: {
+          title: "RF Koruma Çözümleri",
+          desc: "MR güvenliği ve sinyal bütünlüğü için gelişmiş RF kabini montajı.",
+          items: ["RF Kabini Montajı", "Koruma Bütünlük Testi", "Bakır Kafes Kurulumu", "Manyetik Koruma"]
+        }
+      }
     }
   },
   de: {
@@ -250,8 +294,30 @@ export const translations = {
       }
     },
     installPage: {
-      title: "Project Management Solutions",
-      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+      title: "Montage & Demontage",
+      subtitle: "Professionelle Projektmanagementlösungen für medizinische Bildgebungssysteme.",
+      services: {
+        installation: {
+          title: "Montage & Demontage",
+          desc: "Experteninstallation und Demontage für alle großen medizinischen Bildgebungsmarken.",
+          items: ["Gerätedemontage", "Systeminstallation", "Mechanische Montage", "Verkabelung"]
+        },
+        logistics: {
+          title: "Logistik & Transport",
+          desc: "Spezialisierter Transport und Handhabung für empfindliche medizinische Geräte.",
+          items: ["Gerätetransport", "Spezialverpackung", "Internationale Logistik", "Versicherung"]
+        },
+        planning: {
+          title: "Standortplanung & Bau",
+          desc: "Umfassende Standortvorbereitung und architektonische Planung.",
+          items: ["Krankenhausbauplanung", "Standortanalyse", "Architekturzeichnungen", "Strom & Kühlung"]
+        },
+        rf: {
+          title: "RF-Abschirmlösungen",
+          desc: "Fortschrittliche RF-Kabineninstallation und Abschirmung.",
+          items: ["RF-Kabinenmontage", "Abschirmungstest", "Kupferkäfig-Installation", "Magnetische Abschirmung"]
+        }
+      }
     }
   },
   es: {
@@ -335,8 +401,30 @@ export const translations = {
       }
     },
     installPage: {
-      title: "Project Management Solutions",
-      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+      title: "Instalación y Desmontaje",
+      subtitle: "Soluciones profesionales de gestión de proyectos para sistemas de imágenes médicas.",
+      services: {
+        installation: {
+          title: "Instalación y Desmontaje",
+          desc: "Servicios expertos de instalación y desmontaje para las principales marcas.",
+          items: ["Desmontaje de Equipos", "Instalación del Sistema", "Montaje Mecánico", "Cableado"]
+        },
+        logistics: {
+          title: "Logística y Transporte",
+          desc: "Transporte y manejo especializado para equipos médicos sensibles.",
+          items: ["Transporte de Equipos", "Embalaje Especializado", "Logística Internacional", "Seguros"]
+        },
+        planning: {
+          title: "Planificación del Sitio",
+          desc: "Preparación integral del sitio y planificación arquitectónica.",
+          items: ["Planificación de Construcción", "Viabilidad del Sitio", "Planos Arquitectónicos", "Energía y Refrigeración"]
+        },
+        rf: {
+          title: "Soluciones de Blindaje RF",
+          desc: "Instalación avanzada de cabinas RF y blindaje.",
+          items: ["Montaje de Cabina RF", "Prueba de Integridad", "Instalación de Jaula de Cobre", "Blindaje Magnético"]
+        }
+      }
     }
   },
   ru: {
@@ -420,8 +508,30 @@ export const translations = {
       }
     },
     installPage: {
-      title: "Project Management Solutions",
-      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+      title: "Монтаж и Демонтаж",
+      subtitle: "Профессиональные решения по управлению проектами для систем медицинской визуализации.",
+      services: {
+        installation: {
+          title: "Монтаж и Демонтаж",
+          desc: "Экспертный монтаж и демонтаж для всех основных брендов.",
+          items: ["Демонтаж оборудования", "Установка системы", "Механическая сборка", "Кабельная разводка"]
+        },
+        logistics: {
+          title: "Логистика и Транспорт",
+          desc: "Специализированная транспортировка чувствительного медицинского оборудования.",
+          items: ["Транспортировка устройств", "Специальная упаковка", "Международная логистика", "Страхование"]
+        },
+        planning: {
+          title: "Планирование площадки",
+          desc: "Комплексная подготовка площадки и архитектурное планирование.",
+          items: ["Планирование строительства", "Анализ площадки", "Архитектурные чертежи", "Требования к питанию"]
+        },
+        rf: {
+          title: "Решения для РЧ-экранирования",
+          desc: "Усовершенствованная установка РЧ-кабин и экранирование.",
+          items: ["Сборка РЧ-кабины", "Тест на целостность", "Установка медной клетки", "Магнитное экранирование"]
+        }
+      }
     }
   },
 };

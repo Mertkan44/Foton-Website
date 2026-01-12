@@ -85,7 +85,7 @@ export default function AboutPage() {
                                     <div className="relative h-[400px] md:h-[600px] w-full overflow-hidden shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
                                         style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}>
                                         <Image
-                                            src="/card-2.jpg"
+                                            src="/img-about-team.jpg"
                                             alt="Our Story"
                                             fill
                                             className="object-cover"
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
                                     {/* Floating Badge */}
                                     <div className="absolute -bottom-6 -right-6 md:bottom-10 md:-right-10 bg-white p-6 rounded-2xl shadow-xl animate-bounce-slow">
-                                        <div className="text-[#0054a6] font-black text-4xl">10+</div>
+                                        <div className="text-[#0054a6] font-black text-4xl whitespace-nowrap">10 Years+</div>
                                         <div className="text-slate-500 font-bold text-sm uppercase tracking-wider">{t.about.badge}</div>
                                     </div>
                                 </div>
