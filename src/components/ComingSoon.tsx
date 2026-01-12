@@ -23,14 +23,13 @@ export default function ComingSoon({ pageTitle }: ComingSoonProps) {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#0054a6]/10 rounded-full blur-[100px]"></div>
             </div>
 
-            <div className="container mx-auto px-6 text-center relative z-10 group">
+            <div className="container mx-auto px-6 text-center relative z-10 group cursor-default">
 
                 {/* Mascot Image with Float Animation and Mix Blend Mode */}
-                {/* Using mix-blend-multiply to make white background transparent on off-white bg */}
-                {/* Mascot Image with Float Animation and Mix Blend Mode */}{/* Using mix-blend-multiply to make white background transparent on off-white bg */}
-                <div className="relative w-80 h-80 mx-auto mb-8 animate-bounce-slow transition-transform duration-500 hover:scale-105 ease-out">
+                {/* Added group-hover to parent container so hovering anywhere triggers the robot */}
+                <div className="relative w-80 h-80 mx-auto mb-8 animate-bounce-slow transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-rotate-3">
                     <Image
-                        src="/mascot-robot-transparent.png"
+                        src="/mascot-final-v3.png"
                         alt="Coming Soon Mascot"
                         fill
                         className="object-contain drop-shadow-2xl mix-blend-multiply"
@@ -38,11 +37,11 @@ export default function ComingSoon({ pageTitle }: ComingSoonProps) {
                 </div>
 
                 {/* Text Content */}
-                <span className="text-[#0054a6] font-bold uppercase tracking-[0.2em] text-sm mb-4 block animate-fade-in-up">
+                <span className="text-[#0054a6] font-bold uppercase tracking-[0.2em] text-sm mb-4 block animate-fade-in-up transition-all duration-500 group-hover:tracking-[0.3em] group-hover:text-[#00a9e0]">
                     {pageTitle}
                 </span>
 
-                <h1 className="text-5xl md:text-7xl font-black text-[#1e293b] mb-6 tracking-tighter animate-fade-in-up delay-100">
+                <h1 className="text-5xl md:text-7xl font-black text-[#1e293b] mb-6 tracking-tighter animate-fade-in-up delay-100 transition-colors duration-500 group-hover:text-[#0054a6]">
                     {t.comingSoon.title}
                 </h1>
 
