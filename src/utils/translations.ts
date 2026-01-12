@@ -6,6 +6,7 @@ export const translations = {
     stats: { title: "20+ years of excellence.", desc: "Specialized technical services tailored to your facility.", s1: "Projects", s2: "Clients", s3: "Team", s4: "Countries" },
     partners: { title: "Global Reach", desc: "Proudly serving healthcare leaders across these regions." },
     brands: { title: "Trusted Brands", desc: "Expertise across major medical systems." },
+    comingSoon: { title: "Coming Soon", desc: "We are working hard to bring you this service.", back: "Back to Home" },
     aboutPage: {
       hero: { title: "About Us", subtitle: "Building the future of healthcare infrastructure." },
       story: {
@@ -113,6 +114,7 @@ export const translations = {
     stats: { title: "20 yılı aşkın mükemmellik.", desc: "Tesisinize özel teknik servis hizmetleri.", s1: "Proje", s2: "Müşteri", s3: "Uzman", s4: "Ülke" },
     partners: { title: "Küresel Erişim", desc: "Bu bölgelerdeki sağlık liderlerine hizmet vermekten gurur duyuyoruz." },
     brands: { title: "Güvenilen Markalar", desc: "Başlıca tıbbi sistemlerde uzmanlık." },
+    comingSoon: { title: "Çok Yakında", desc: "Bu hizmeti size sunmak için çok çalışıyoruz.", back: "Ana Sayfaya Dön" },
     aboutPage: {
       hero: { title: "Hakkımızda", subtitle: "Sağlık altyapısının geleceğini inşa ediyoruz." },
       story: {
@@ -220,6 +222,7 @@ export const translations = {
     stats: { title: "20+ Jahre Exzellenz.", desc: "Technische Dienstleistungen für Ihre Klinik.", s1: "Projekte", s2: "Kunden", s3: "Team", s4: "Länder" },
     partners: { title: "Globale Reichweite", desc: "Stolz darauf, Gesundheitsführer in diesen Regionen zu bedienen." },
     brands: { title: "Vertrauenswürdige Marken", desc: "Expertise in wichtigen medizinischen Systemen." },
+    comingSoon: { title: "Demnächst", desc: "Wir arbeiten hart daran, Ihnen diesen Service anzubieten.", back: "Zurück zur Startseite" },
     aboutPage: {
       hero: { title: "Über uns", subtitle: "Die Zukunft der Gesundheitsinfrastruktur gestalten." },
       story: {
@@ -327,6 +330,7 @@ export const translations = {
     stats: { title: "20+ años de excelencia.", desc: "Servicios técnicos a medida para su centro.", s1: "Proyectos", s2: "Clientes", s3: "Equipo", s4: "Países" },
     partners: { title: "Alcance Global", desc: "Orgullosos de servir a líderes de la salud en estas cinco regiones." },
     brands: { title: "Marcas de Confianza", desc: "Experiencia en los principales sistemas médicos." },
+    comingSoon: { title: "Próximamente", desc: "Estamos trabajando duro para ofrecerle este servicio.", back: "Volver al Inicio" },
     aboutPage: {
       hero: { title: "Sobre Nosotros", subtitle: "Construyendo el futuro de la infraestructura sanitaria." },
       story: {
@@ -434,6 +438,7 @@ export const translations = {
     stats: { title: "20+ лет опыта.", desc: "Технические услуги для вашего учреждения.", s1: "Проекты", s2: "Клиенты", s3: "Команда", s4: "Страны" },
     partners: { title: "Глобальный охват", desc: "С гордостью обслуживаем лидеров здравоохранения в этих регионах." },
     brands: { title: "Доверенные бренды", desc: "Экспертиза в основных медицинских системах." },
+    comingSoon: { title: "Скоро", desc: "Мы усердно работаем, чтобы предоставить вам эту услугу.", back: "Вернуться на главную" },
     aboutPage: {
       hero: { title: "О нас", subtitle: "Создаем будущее инфраструктуры здравоохранения." },
       story: {
