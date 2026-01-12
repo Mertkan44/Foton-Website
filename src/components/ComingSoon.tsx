@@ -27,7 +27,8 @@ export default function ComingSoon({ pageTitle }: ComingSoonProps) {
 
                 {/* Mascot Image with Float Animation and Mix Blend Mode */}
                 {/* Using mix-blend-multiply to make white background transparent on off-white bg */}
-                <div className="relative w-72 h-72 mx-auto mb-8 animate-bounce-slow transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 ease-out origin-bottom">
+                {/* Mascot Image with Float Animation and Mix Blend Mode */}{/* Using mix-blend-multiply to make white background transparent on off-white bg */}
+                <div className="relative w-80 h-80 mx-auto mb-8 animate-bounce-slow transition-transform duration-500 hover:scale-105 ease-out">
                     <Image
                         src="/mascot-robot-transparent.png"
                         alt="Coming Soon Mascot"
@@ -41,7 +42,7 @@ export default function ComingSoon({ pageTitle }: ComingSoonProps) {
                     {pageTitle}
                 </span>
 
-                <h1 className="text-5xl md:text-7xl font-black text-[#1e293b] mb-6 tracking-tighter animate-fade-in-up delay-100 transition-transform duration-300 group-hover:tracking-normal">
+                <h1 className="text-5xl md:text-7xl font-black text-[#1e293b] mb-6 tracking-tighter animate-fade-in-up delay-100">
                     {t.comingSoon.title}
                 </h1>
 
