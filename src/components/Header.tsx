@@ -31,7 +31,6 @@ const Header = () => {
   }, [isOpen]);
 
   const menuItems = [
-    { name: t.rental, href: "/rental" },
     { name: t.parts, href: "/parts" },
     { name: t.about, href: "/about" },
     { name: t.contact, href: "/contact" },
@@ -46,16 +45,28 @@ const Header = () => {
 
         {/* Masaüstü Menü */}
         <div className="hidden lg:flex items-center gap-10">
+          {/* Çözümler Dropdown */}
           <div className="relative group cursor-pointer">
             <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all">
               {t.solutions} <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </span>
-            {/* Şık Dropdown */}
-            <div className="absolute top-full -left-4 mt-2 w-48 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
-              <Link href="/installation" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.installation}</Link>
-              <Link href="/dismantling" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.dismantling}</Link>
+            <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
+              <Link href="/service-solutions" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.serviceSolutions}</Link>
+              <Link href="/installation-dismantling" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.installDismantling}</Link>
             </div>
           </div>
+
+          {/* Satış ve Kiralama Dropdown */}
+          <div className="relative group cursor-pointer">
+            <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all">
+              {t.salesRental} <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            </span>
+            <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
+              <Link href="/veterinary" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.veterinary}</Link>
+              <Link href="/medical-devices" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.medicalDevices}</Link>
+            </div>
+          </div>
+
           {menuItems.map((item) => (
             <Link key={item.href} href={item.href} className="text-[#1e293b] font-bold text-[18px] hover:text-[#0054a6] relative group">
               {item.name} <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-[#0054a6] transition-all group-hover:w-full"></span>
@@ -98,10 +109,19 @@ const Header = () => {
             ))}
           </div>
           <div className="flex flex-col gap-6 text-center">
-            <span className="text-slate-400 font-bold uppercase text-xs tracking-widest">{t.solutions}</span>
-            <Link href="/installation" onClick={() => setIsOpen(false)} className="text-3xl font-black text-[#1e293b]">{t.installation}</Link>
-            <Link href="/dismantling" onClick={() => setIsOpen(false)} className="text-3xl font-black text-[#1e293b]">{t.dismantling}</Link>
+
+            {/* Çözümler Mobil */}
+            <Link href="/service-solutions" onClick={() => setIsOpen(false)} className="text-2xl font-black text-[#1e293b]">{t.serviceSolutions}</Link>
+            <Link href="/installation-dismantling" onClick={() => setIsOpen(false)} className="text-2xl font-black text-[#1e293b]">{t.installDismantling}</Link>
+
             <hr className="border-slate-100 mx-10" />
+
+            {/* Satış ve Kiralama Mobil */}
+            <Link href="/veterinary" onClick={() => setIsOpen(false)} className="text-2xl font-black text-[#1e293b]">{t.veterinary}</Link>
+            <Link href="/medical-devices" onClick={() => setIsOpen(false)} className="text-2xl font-black text-[#1e293b]">{t.medicalDevices}</Link>
+
+            <hr className="border-slate-100 mx-10" />
+
             {menuItems.map((item) => (
               <Link key={item.href} href={item.href} className="text-3xl font-black text-[#1e293b]" onClick={() => setIsOpen(false)}>{item.name}</Link>
             ))}

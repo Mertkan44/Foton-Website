@@ -1,8 +1,8 @@
 export const translations = {
   en: {
-    nav: { solutions: "Solutions", installation: "Installation", dismantling: "Dismantling", rental: "Rental", parts: "Parts", about: "About", contact: "Contact", btn: "Get in touch", privacy: "Privacy Policy" },
+    nav: { solutions: "Solutions", serviceSolutions: "Service Solutions", installDismantling: "Installation / Dismantling", installation: "Installation", dismantling: "Dismantling", salesRental: "Sales & Rental", veterinary: "Veterinary", medicalDevices: "Medical Devices", parts: "Parts", about: "About", contact: "Contact", btn: "Get in touch", privacy: "Privacy Policy" },
     hero: { title1: "Your Provider of", title2: "High Quality", title3: "Medical Solutions", desc: "Providing high-end diagnostic equipment and technical services for healthcare facilities across Scandinavia.", btn: "Our Services" },
-    cards: { c1: "Solutions", c2: "Rental", c3: "Spare Parts" },
+    cards: { c1: "Solutions", c2: "Sales & Rental", c3: "Spare Parts" },
     stats: { title: "20+ years of excellence.", desc: "Specialized technical services tailored to your facility.", s1: "Projects", s2: "Clients", s3: "Team", s4: "Countries" },
     partners: { title: "Global Reach", desc: "Proudly serving healthcare leaders across these regions." },
     brands: { title: "Trusted Brands", desc: "Expertise across major medical systems." },
@@ -54,12 +54,40 @@ export const translations = {
       }
     },
     cookie: { text: "We use cookies to ensure you get the best experience on our website. By continuing to browse, you agree to our use of cookies.", accept: "Accept All", decline: "Decline" },
-    footer: { desc: "Technical excellence in medical solutions.", t1: "Solutions", t2: "Company", t3: "Support", support: "Available 24/7.", copy: "© 2025 Foton SC. All rights reserved." }
+    footer: { desc: "Technical excellence in medical solutions.", t1: "Solutions", t2: "Company", t3: "Support", support: "Available 24/7.", copy: "© 2025 Foton SC. All rights reserved." },
+    servicePage: {
+      title: "Service Solutions",
+      mr: {
+        title: "Magnetic Resonance Service Solution",
+        items: ["Guidance & Consultancy for Site Planning and Preparation", "Noise control measurements", "RF room preparation, control & installation", "Device installation and dismantling services", "Magnet Shimming, Tuning & Image quality optimization", "Customized service contracts", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Traing", "Technical Training", "Coldhead and compressor repair & replacement", "Magnet quench recovery", "RF coil repair and refurbishment", "Magnetic Resonance (MR) transport", "MRI device evaluation and technical controls"]
+      },
+      angio: {
+        title: "Angio & X-Ray Solutions",
+        items: ["Guidance for Site Planning and Preparation", "Device installation and dismantling services", "Comprehensive service network", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "X-Ray tube replacement", "Device transport", "Device evaluation and technical control"]
+      },
+      ct: {
+        title: "Computed Tomography (CT) Service Solutions",
+        items: ["Site planning and preparation", "Installation / Device dismantling", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "CT tube replacement and rental services", "CT Rental", "CT Transport", "CT device evaluation and control"]
+      },
+      integrated: {
+        title: "Integrated Service Management",
+        desc: "Foton Health Solutions offers integrated service management including maintenance, repair, logistics, spare parts, and 24/7 intervention services.",
+        items: ["Maintenance & Repair", "Logistics", "Spare Parts", "24/7 Intervention"]
+      },
+      nuclear: {
+        title: "Nuclear Medicine Solutions",
+        items: ["PET CT, PET MRI Service", "GAMMA CAMERA Service", "Device installation and dismantling services", "Application Training"]
+      }
+    },
+    installPage: {
+      title: "Project Management Solutions",
+      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+    }
   },
   tr: {
-    nav: { solutions: "Çözümler", installation: "Montaj", dismantling: "Demontaj", rental: "Kiralama", parts: "Yedek Parça", about: "Hakkımızda", contact: "İletişim", btn: "İletişime Geç", privacy: "Gizlilik Politikası" },
+    nav: { solutions: "Çözümler", serviceSolutions: "Servis Çözümleri", installDismantling: "Montaj / Demontaj", installation: "Montaj", dismantling: "Demontaj", salesRental: "Satış ve Kiralama", veterinary: "Veterinerlik", medicalDevices: "Medikal Cihazlar", parts: "Yedek Parça", about: "Hakkımızda", contact: "İletişim", btn: "İletişime Geç", privacy: "Gizlilik Politikası" },
     hero: { title1: "Yüksek Kaliteli", title2: "Medikal Çözüm", title3: "Sağlayıcınız", desc: "İskandinavya genelindeki sağlık tesisleri için montaj, demontaj ve esnek kiralama çözümleri.", btn: "Hizmetlerimiz" },
-    cards: { c1: "Çözümler", c2: "Kiralama", c3: "Yedek Parça" },
+    cards: { c1: "Çözümler", c2: "Satış & Kiralama", c3: "Yedek Parça" },
     stats: { title: "20 yılı aşkın mükemmellik.", desc: "Tesisinize özel teknik servis hizmetleri.", s1: "Proje", s2: "Müşteri", s3: "Uzman", s4: "Ülke" },
     partners: { title: "Küresel Erişim", desc: "Bu bölgelerdeki sağlık liderlerine hizmet vermekten gurur duyuyoruz." },
     brands: { title: "Güvenilen Markalar", desc: "Başlıca tıbbi sistemlerde uzmanlık." },
@@ -68,9 +96,9 @@ export const translations = {
       story: {
         title: "Biz Kimiz",
         p1: "Foton Sağlık Çözümleri A.Ş.; Üretici firmalar bünyesinde uzun yıllar çalışmış deneyimli, satış, servis yöneticileri ve mühendisleri tarafından 2014 yılında kuruldu.",
-        p2: "Foton’un faaliyet alanı; Tam kapsamlı servis çözümü, ihtiyaçlara uygun çözümler ile problemlerin zamanında giderilmesi, doğrudan ihtiyaçlara yönelik çözümler, Cihaz kurulumu, sökülmesi, CT, Anjio ve X-Işını tüp değişimi, Magnet ayarlarının optimize edilmesi ve shim, Magnet coldhead ve kompresör hizmetleri, Tüm Hastane Servis Çözümü, Bakım-onarım hizmeti, Teknik destek, Uygulama ve Servis eğitimleri.",
-        p3: "Proje ortağı olarak yaratıcı çözüm önerilerinin oluşturulması, Özenle seçilen sıfır X-Işını cihazları, sıfır taşınabilir ultrason cihazı satışı, BT, MRI ve PET/CT cihazlarının alımı, satımı veya servis hizmetleri. Sabit ya da mobil sistemler ile anahtar teslim görüntüleme merkezlerinin kurulması, sistem alımı, kurulumu, eğitim programlarının oluşturulması ve yürütülmesi ile A’dan Z’ye projelendirme hizmetlerinin sağlanması.",
-        p4: "Foton geniş bir hizmet yelpazesi ile mevcut ya da ileriye dönük olarak ihtiyaç duyulabilecek hizmetleri sunabilecek teknik kapasite oluşturmuştur. Misyonumuz, zamanında ve eksiksiz hizmet anlayışıyla ihtiyaçlara uygun çözümlerin en az maliyetle üretilmesidir."
+        p2: "Foton’un  faaliyet alanı; Tam kapsamlı servis çözümü, ihtiyaçlara uygun  çözümler ile problemlerin zamanında giderilmesi, doğrudan ihtiyaçlara yönelik çözümler, Cihaz kurulumu, sökülmesi, CT, Anjio ve X-Işını tüp değişimi, Magnet ayarlarının optimize edilmesi ve shim, Magnet coldhead ve kompresör  hizmetleri, Tüm Hastane Servis Çözümü, Bakım-onarım hizmeti, Teknik destek, Uygulama ve Servis eğitimleri.",
+        p3: "Proje ortağı olarak yaratıcı çözüm önerilerinin oluşturulması,  Özenle seçilen sıfır X-Işını cihazları, sıfır taşınabilir ultrason cihazı satışı, BT, MRI ve PET/CT cihazlarının alımı, satımı veya servis hizmetleri. Sabit ya da mobil sistemler ile anahtar teslim görüntüleme  merkezlerinin kurulması, sistem alımı, kurulumu, eğitim programlarının oluşturulması ve yürütülmesi ile A’dan Z’ye projelendirme hizmetlerinin sağlanması.",
+        p4: "Foton geniş bir hizmet yelpazesi ile mevcut  ya da ileriye dönük olarak ihtiyaç duyulabilecek hizmetleri sunabilecek  teknik kapasite oluşturmuştur. Misyonumuz, zamanında ve eksiksiz hizmet anlayışıyla ihtiyaçlara uygun çözümlerin en az maliyetle üretilmesidir."
       },
       values: { title: "Değerlerimiz", v1: "Dürüstlük", v1d: "Her eylemde şeffaflık.", v2: "Mükemmellik", v2d: "Standartların ötesinde.", v3: "İnovasyon", v3d: "Yeniliği kucaklamak." },
       certs: {
@@ -111,12 +139,40 @@ export const translations = {
       }
     },
     cookie: { text: "Web sitemizde size en iyi deneyimi sunmak için çerezleri kullanıyoruz. Gezinmeye devam ederek çerez kullanımımızı kabul etmiş olursunuz.", accept: "Kabul Et", decline: "Reddet" },
-    footer: { desc: "Medikal çözümlerde teknik mükemmellik.", t1: "Çözümler", t2: "Kurumsal", t3: "Destek", support: "7/24 hizmetinizdeyiz.", copy: "© 2025 Foton SC. Tüm hakları saklıdır." }
+    footer: { desc: "Medikal çözümlerde teknik mükemmellik.", t1: "Çözümler", t2: "Kurumsal", t3: "Destek", support: "7/24 hizmetinizdeyiz.", copy: "© 2025 Foton SC. Tüm hakları saklıdır." },
+    servicePage: {
+      title: "Servis Çözümleri",
+      mr: {
+        title: "Manyetik Rezonans Servis Çözümleri",
+        items: ["Saha planlanması ve Saha hazırlığında Rehberlik & Danışmanlık Hizmetleri", "Gürültü kontrolü ölçümleri", "RF odası hazırlığı & kontrolü ve montajı", "Cihazların montaj ve demontaj hizmetleri", "Magnet Shimming, Ayarlama, Tuning & Görüntü kalitesi optimasyonu", "Müşterinin istekleri doğrultusunda servis kontratları", "İş Hizmetleri Sözleşmeleri / Planlanmış Bakım Kontratları", "On-Call Servis", "Uzaktan erişim Hizmetleri", "Aplikasyon Eğitimleri", "Teknik eğitimler", "Coldhead and compressor onarımı ve değişimi", "Magnet quench kurtarma", "RF coil tamiri ve yenilenmesi", "Manyetik rezonans (MR) cihazı taşıması", "MRI cihazlarının değerlendirilmesi ve teknik kontrollleri"]
+      },
+      angio: {
+        title: "Anjio ve Xray Çözümleri",
+        items: ["Saha planlanması ve Saha hazırlığında Rehberlik Hizmeteri", "Cihazların montaj ve demontaj hizmetleri", "Kapsamlı servis ağı", "İş Hizmetleri Sözleşmeleri / Planlanmış Bakım Kontratları", "On-Call Servis", "Uzaktan erişim Hizmetleri", "Aplikasyon Eğitimleri", "Teknik Eğitimler", "X-Ray tüpü yenileme", "Cihaz taşıma", "Cihaz değerlendirme ve teknik kontrolü"]
+      },
+      ct: {
+        title: "Bilgisayarlı Tomografi (CT) Servis Çözümleri",
+        items: ["Saha planlama ve yer hazırlığı", "Kurulum / Cihaz demontaj", "İş Hizmetleri Sözleşmeleri / Planlanmış bakım kontratları", "On-Call Servis", "Uzaktan erişim Hizmetleri", "Aplikasyon Eğitimleri", "Teknik eğitimler", "Bilgisayarlı Tomografi tüpü değişimi ve kiralama hizmetleri", "Bilgisayarlı Tomografi kiralama", "Bilgisayarlı Tomografi taşıma işi", "Bilgisayarlı Tomografi cihazlarının değerlendirilmesi ve kontrolü"]
+      },
+      integrated: {
+        title: "Entegre Servis Yönetimi",
+        desc: "Foton Sağlık Çözümleri entegre hizmet yönetimi ile bakım onarım, lojistik, yedek parça ve 7/24 müdahale hizmetlerini sunar.",
+        items: ["Bakım Onarım", "Lojistik", "Yedek Parça", "7/24 Müdahale"]
+      },
+      nuclear: {
+        title: "Nükleer Tıp Çözümleri",
+        items: ["PET CT, PET MRI Servis", "GAMA KAMERA Servis", "Cihazların montaj ve demontaj hizmetleri", "Aplikasyon Eğitimleri"]
+      }
+    },
+    installPage: {
+      title: "Proje Yönetimi Çözümleri",
+      items: ["Cihaz demontaj", "Cihaz taşıma", "Kurulum", "Lojistik", "Hastaneler için inşaat planlamaları", "Saha planlama", "RF Kabini montajı"]
+    }
   },
   de: {
-    nav: { solutions: "Lösungen", installation: "Montage", dismantling: "Demontage", rental: "Vermietung", parts: "Ersatzteile", about: "Über uns", contact: "Kontakt", btn: "Kontakt", privacy: "Datenschutz" },
+    nav: { solutions: "Lösungen", serviceSolutions: "Service Lösungen", installDismantling: "Montage / Demontage", installation: "Montage", dismantling: "Demontage", salesRental: "Verkauf & Vermietung", veterinary: "Veterinär", medicalDevices: "Medizinische Geräte", parts: "Ersatzteile", about: "Über uns", contact: "Kontakt", btn: "Kontakt", privacy: "Datenschutz" },
     hero: { title1: "Ihr Anbieter für", title2: "Hochwertige", title3: "Medizintechnik", desc: "Montage, Demontage und Vermietung für Kliniken in Skandinavien.", btn: "Leistungen" },
-    cards: { c1: "Lösungen", c2: "Vermietung", c3: "Ersatzteile" },
+    cards: { c1: "Lösungen", c2: "Verkauf & Vermietung", c3: "Ersatzteile" },
     stats: { title: "20+ Jahre Exzellenz.", desc: "Technische Dienstleistungen für Ihre Klinik.", s1: "Projekte", s2: "Kunden", s3: "Team", s4: "Länder" },
     partners: { title: "Globale Reichweite", desc: "Stolz darauf, Gesundheitsführer in diesen Regionen zu bedienen." },
     brands: { title: "Vertrauenswürdige Marken", desc: "Expertise in wichtigen medizinischen Systemen." },
@@ -168,12 +224,40 @@ export const translations = {
       }
     },
     cookie: { text: "Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten. Durch die weitere Nutzung stimmen Sie unserer Verwendung von Cookies zu.", accept: "Akzeptieren", decline: "Ablehnen" },
-    footer: { desc: "Technische Exzellenz in der Medizintechnik.", t1: "Lösungen", t2: "Firma", t3: "Support", support: "24/7 Support.", copy: "© 2025 Foton SC. Alle Rechte vorbehalten." }
+    footer: { desc: "Technische Exzellenz in der Medizintechnik.", t1: "Lösungen", t2: "Firma", t3: "Support", support: "24/7 Support.", copy: "© 2025 Foton SC. Alle Rechte vorbehalten." },
+    servicePage: {
+      title: "Service Solutions",
+      mr: {
+        title: "Magnetic Resonance Service Solution",
+        items: ["Guidance & Consultancy for Site Planning and Preparation", "Noise control measurements", "RF room preparation, control & installation", "Device installation and dismantling services", "Magnet Shimming, Tuning & Image quality optimization", "Customized service contracts", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Traing", "Technical Training", "Coldhead and compressor repair & replacement", "Magnet quench recovery", "RF coil repair and refurbishment", "Magnetic Resonance (MR) transport", "MRI device evaluation and technical controls"]
+      },
+      angio: {
+        title: "Angio & X-Ray Solutions",
+        items: ["Guidance for Site Planning and Preparation", "Device installation and dismantling services", "Comprehensive service network", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "X-Ray tube replacement", "Device transport", "Device evaluation and technical control"]
+      },
+      ct: {
+        title: "Computed Tomography (CT) Service Solutions",
+        items: ["Site planning and preparation", "Installation / Device dismantling", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "CT tube replacement and rental services", "CT Rental", "CT Transport", "CT device evaluation and control"]
+      },
+      integrated: {
+        title: "Integrated Service Management",
+        desc: "Foton Health Solutions offers integrated service management including maintenance, repair, logistics, spare parts, and 24/7 intervention services.",
+        items: ["Maintenance & Repair", "Logistics", "Spare Parts", "24/7 Intervention"]
+      },
+      nuclear: {
+        title: "Nuclear Medicine Solutions",
+        items: ["PET CT, PET MRI Service", "GAMMA CAMERA Service", "Device installation and dismantling services", "Application Training"]
+      }
+    },
+    installPage: {
+      title: "Project Management Solutions",
+      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+    }
   },
   es: {
-    nav: { solutions: "Soluciones", installation: "Instalación", dismantling: "Desmontaje", rental: "Alquiler", parts: "Repuestos", about: "Nosotros", contact: "Contacto", btn: "Contacto", privacy: "Privacidad" },
+    nav: { solutions: "Soluciones", serviceSolutions: "Soluciones de Servicio", installDismantling: "Instalación / Desmontaje", installation: "Instalación", dismantling: "Desmontaje", salesRental: "Ventas y Alquiler", veterinary: "Veterinario", medicalDevices: "Dispositivos Médicos", parts: "Repuestos", about: "Nosotros", contact: "Contacto", btn: "Contacto", privacy: "Privacidad" },
     hero: { title1: "Su proveedor de", title2: "Alta Calidad", title3: "Médica", desc: "Instalación, desmontaje y alquiler para centros sanitarios en Escandinavia.", btn: "Servicios" },
-    cards: { c1: "Soluciones", c2: "Alquiler", c3: "Repuestos" },
+    cards: { c1: "Soluciones", c2: "Ventas y Alquiler", c3: "Repuestos" },
     stats: { title: "20+ años de excelencia.", desc: "Servicios técnicos a medida para su centro.", s1: "Proyectos", s2: "Clientes", s3: "Equipo", s4: "Países" },
     partners: { title: "Alcance Global", desc: "Orgullosos de servir a líderes de la salud en estas cinco regiones." },
     brands: { title: "Marcas de Confianza", desc: "Experiencia en los principales sistemas médicos." },
@@ -225,12 +309,40 @@ export const translations = {
       }
     },
     cookie: { text: "Utilizamos cookies para asegurarnos de que obtenga la mejor experiencia en nuestro sitio web. Al continuar navegando, acepta nuestro uso de cookies.", accept: "Aceptar", decline: "Rechazar" },
-    footer: { desc: "Excelencia técnica en soluciones médicas.", t1: "Soluciones", t2: "Empresa", t3: "Soporte", support: "Disponible 24/7.", copy: "© 2025 Foton SC. Todos los derechos reservados." }
+    footer: { desc: "Excelencia técnica en soluciones médicas.", t1: "Soluciones", t2: "Empresa", t3: "Soporte", support: "Disponible 24/7.", copy: "© 2025 Foton SC. Todos los derechos reservados." },
+    servicePage: {
+      title: "Service Solutions",
+      mr: {
+        title: "Magnetic Resonance Service Solution",
+        items: ["Guidance & Consultancy for Site Planning and Preparation", "Noise control measurements", "RF room preparation, control & installation", "Device installation and dismantling services", "Magnet Shimming, Tuning & Image quality optimization", "Customized service contracts", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Traing", "Technical Training", "Coldhead and compressor repair & replacement", "Magnet quench recovery", "RF coil repair and refurbishment", "Magnetic Resonance (MR) transport", "MRI device evaluation and technical controls"]
+      },
+      angio: {
+        title: "Angio & X-Ray Solutions",
+        items: ["Guidance for Site Planning and Preparation", "Device installation and dismantling services", "Comprehensive service network", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "X-Ray tube replacement", "Device transport", "Device evaluation and technical control"]
+      },
+      ct: {
+        title: "Computed Tomography (CT) Service Solutions",
+        items: ["Site planning and preparation", "Installation / Device dismantling", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "CT tube replacement and rental services", "CT Rental", "CT Transport", "CT device evaluation and control"]
+      },
+      integrated: {
+        title: "Integrated Service Management",
+        desc: "Foton Health Solutions offers integrated service management including maintenance, repair, logistics, spare parts, and 24/7 intervention services.",
+        items: ["Maintenance & Repair", "Logistics", "Spare Parts", "24/7 Intervention"]
+      },
+      nuclear: {
+        title: "Nuclear Medicine Solutions",
+        items: ["PET CT, PET MRI Service", "GAMMA CAMERA Service", "Device installation and dismantling services", "Application Training"]
+      }
+    },
+    installPage: {
+      title: "Project Management Solutions",
+      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+    }
   },
   ru: {
-    nav: { solutions: "Решения", installation: "Монтаж", dismantling: "Демонтаж", rental: "Аренда", parts: "Запчасти", about: "О нас", contact: "Контакт", btn: "Связаться", privacy: "Приватность" },
+    nav: { solutions: "Решения", serviceSolutions: "Сервисные решения", installDismantling: "Монтаж / Демонтаж", installation: "Монтаж", dismantling: "Демонтаж", salesRental: "Продажа и Аренда", veterinary: "Ветеринария", medicalDevices: "Медицинские устройства", parts: "Запчасти", about: "О нас", contact: "Контакт", btn: "Связаться", privacy: "Приватность" },
     hero: { title1: "Ваш поставщик", title2: "высококачественных", title3: "решений", desc: "Монтаж, демонтаж и аренда для медицинских учреждений в Скандинавии.", btn: "Услуги" },
-    cards: { c1: "Решения", c2: "Аренда", c3: "Запчасти" },
+    cards: { c1: "Решения", c2: "Продажа и Аренда", c3: "Запчасти" },
     stats: { title: "20+ лет опыта.", desc: "Технические услуги для вашего учреждения.", s1: "Проекты", s2: "Клиенты", s3: "Команда", s4: "Страны" },
     partners: { title: "Глобальный охват", desc: "С гордостью обслуживаем лидеров здравоохранения в этих регионах." },
     brands: { title: "Доверенные бренды", desc: "Экспертиза в основных медицинских системах." },
@@ -282,6 +394,34 @@ export const translations = {
       }
     },
     cookie: { text: "Мы используем файлы cookie, чтобы обеспечить вам лучший опыт на нашем веб-сайте. Продолжая просматривать, вы соглашаетесь с нашим использованием файлов cookie.", accept: "Принять", decline: "Отклонить" },
-    footer: { desc: "Техническое совершенство в медицине.", t1: "Решения", t2: "Компания", t3: "Поддержка", support: "Доступны 24/7.", copy: "© 2025 Foton SC. Все права защищены." }
-  }
+    footer: { desc: "Техническое совершенство в медицине.", t1: "Решения", t2: "Компания", t3: "Поддержка", support: "Доступны 24/7.", copy: "© 2025 Foton SC. Все права защищены." },
+    servicePage: {
+      title: "Service Solutions",
+      mr: {
+        title: "Magnetic Resonance Service Solution",
+        items: ["Guidance & Consultancy for Site Planning and Preparation", "Noise control measurements", "RF room preparation, control & installation", "Device installation and dismantling services", "Magnet Shimming, Tuning & Image quality optimization", "Customized service contracts", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Traing", "Technical Training", "Coldhead and compressor repair & replacement", "Magnet quench recovery", "RF coil repair and refurbishment", "Magnetic Resonance (MR) transport", "MRI device evaluation and technical controls"]
+      },
+      angio: {
+        title: "Angio & X-Ray Solutions",
+        items: ["Guidance for Site Planning and Preparation", "Device installation and dismantling services", "Comprehensive service network", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "X-Ray tube replacement", "Device transport", "Device evaluation and technical control"]
+      },
+      ct: {
+        title: "Computed Tomography (CT) Service Solutions",
+        items: ["Site planning and preparation", "Installation / Device dismantling", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Training", "Technical Training", "CT tube replacement and rental services", "CT Rental", "CT Transport", "CT device evaluation and control"]
+      },
+      integrated: {
+        title: "Integrated Service Management",
+        desc: "Foton Health Solutions offers integrated service management including maintenance, repair, logistics, spare parts, and 24/7 intervention services.",
+        items: ["Maintenance & Repair", "Logistics", "Spare Parts", "24/7 Intervention"]
+      },
+      nuclear: {
+        title: "Nuclear Medicine Solutions",
+        items: ["PET CT, PET MRI Service", "GAMMA CAMERA Service", "Device installation and dismantling services", "Application Training"]
+      }
+    },
+    installPage: {
+      title: "Project Management Solutions",
+      items: ["Device dismantling", "Device transport", "Installation", "Logistics", "Hospital construction planning", "Site planning", "RF Cabin installation"]
+    }
+  },
 };
