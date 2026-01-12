@@ -36,7 +36,7 @@ export default function Footer() {
                                     href="/rental"
                                     className="hover:text-[#00a9e0] transition-colors"
                                 >
-                                    {t.nav.rental}
+                                    {t.nav.salesRental}
                                 </Link>
                             </li>
                             <li>
