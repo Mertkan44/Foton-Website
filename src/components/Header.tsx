@@ -96,9 +96,18 @@ const Header = () => {
       {/* Mobil Menü */}
       <div className={`fixed inset-0 bg-[#fdfbf7] z-[105] transition-all duration-500 overflow-y-auto overscroll-none ${isOpen ? "opacity-100 visible" : "opacity-0 invisible translate-x-full"}`}>
         <div className="flex flex-col min-h-full">
-          {/* Header Spacer */}
-          <div className="h-[100px] flex items-center justify-end px-6 border-b border-slate-100/50">
-            {/* İçerik gerekirse buraya */}
+          {/* Mobil Menü Header */}
+          <div className="h-[100px] flex items-center justify-between px-6 border-b border-slate-100/50">
+            <Link href="/" onClick={() => setIsOpen(false)} className="block">
+              <Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8" priority />
+            </Link>
+            <button className="p-2 text-[#1e293b]" onClick={() => setIsOpen(false)}>
+              <div className="space-y-1.5">
+                <span className="block h-0.5 w-7 bg-current rotate-45 translate-y-2"></span>
+                <span className="block h-0.5 w-7 bg-current opacity-0"></span>
+                <span className="block h-0.5 w-7 bg-current -rotate-45 -translate-y-2"></span>
+              </div>
+            </button>
           </div>
 
           <div className="flex-1 flex flex-col p-6 pt-8">
