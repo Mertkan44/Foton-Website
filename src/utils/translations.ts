@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     nav: { solutions: "Solutions", serviceSolutions: "Service Solutions", installDismantling: "Installation / Dismantling", installation: "Installation", dismantling: "Dismantling", salesRental: "Sales & Rental", veterinary: "Veterinary", medicalDevices: "Medical Devices", parts: "Parts", about: "About", contact: "Contact", btn: "Get in touch", privacy: "Privacy Policy" },
-    hero: { title1: "Your Provider of", title2: "High Quality", title3: "Medical Solutions", desc: "Providing high-end diagnostic equipment and technical services for healthcare facilities across Scandinavia.", btn: "Our Services" },
+    hero: { title1: "Your Provider of", title2: "High Quality", title3: "Medical Solutions", desc: "Providing high-end diagnostic equipment and technical services for healthcare facilities across Turkey and globally.", btn: "Our Services" },
     cards: { c1: "Solutions", c2: "Sales & Rental", c3: "Spare Parts" },
     stats: { title: "20+ years of excellence.", desc: "Specialized technical services tailored to your facility.", s1: "Projects", s2: "Clients", s3: "Team", s4: "Countries" },
     partners: { title: "Global Reach", desc: "Proudly serving healthcare leaders across these regions." },
@@ -35,7 +35,19 @@ export const translations = {
           "To organize environmental training and awareness activities inside and outside the company,",
           "To ensure continuous improvement."
         ],
-        desc: "Commitment to international standards in quality and environmental responsibility."
+        iso45001: "ISO 45001:2018 Occupational Health & Safety",
+        iso45001_desc: "To ensure a safe and healthy working environment and in this context:",
+        iso45001_items: [
+          "To identify and minimize occupational health and safety risks,",
+          "To comply with all applicable legal and regulatory requirements,",
+          "To provide continuous training and awareness to all employees,",
+          "To prevent work-related injuries and illnesses,",
+          "To continuously improve our occupational health and safety performance."
+        ],
+        desc: "Commitment to international standards in quality and environmental responsibility.",
+        certsTitle: "Our Certificates",
+        certsDesc: "Download and verify our international certifications.",
+        viewCert: "View Certificate"
       }
     },
     about: { badge: "Experience", sub: "Who We Are", title: "Empowering Healthcare", desc1: "Strategic partner in clinical excellence.", desc2: "Specializing in installation and dismantling services.", f1: "Expertise", f1d: "Certified team.", f2: "Support", f2d: "24/7 service." },
@@ -49,7 +61,7 @@ export const translations = {
       office: { title: "Office Info", loc: "Location", mail: "Email", supp: "24/7 Support" },
       faq: {
         title: "Frequently Asked Questions",
-        q1: "What regions do you serve?", a1: "We primarily serve Scandinavia and Northern Europe, but we handle global installations upon request.",
+        q1: "What regions do you serve?", a1: "We primarily serve Turkey and globally, handling installations upon request.",
         q2: "How long does a dismantling process take?", a2: "Depending on the complexity of the medical system (CT, MRI, etc.), it typically takes between 2 to 5 business days.",
         q3: "Is insurance included in logistics?", a3: "Yes, all our transportation and logistics services include comprehensive insurance for medical high-end devices."
       }
@@ -109,7 +121,7 @@ export const translations = {
   },
   tr: {
     nav: { solutions: "Çözümler", serviceSolutions: "Servis Çözümleri", installDismantling: "Montaj / Demontaj", installation: "Montaj", dismantling: "Demontaj", salesRental: "Satış ve Kiralama", veterinary: "Veterinerlik", medicalDevices: "Medikal Cihazlar", parts: "Yedek Parça", about: "Hakkımızda", contact: "İletişim", btn: "İletişime Geç", privacy: "Gizlilik Politikası" },
-    hero: { title1: "Yüksek Kaliteli", title2: "Medikal Çözüm", title3: "Sağlayıcınız", desc: "İskandinavya genelindeki sağlık tesisleri için montaj, demontaj ve esnek kiralama çözümleri.", btn: "Hizmetlerimiz" },
+    hero: { title1: "Yüksek Kaliteli", title2: "Medikal Çözüm", title3: "Sağlayıcınız", desc: "Türkiye ve Dünya genelindeki sağlık tesisleri için montaj, demontaj ve esnek kiralama çözümleri.", btn: "Hizmetlerimiz" },
     cards: { c1: "Çözümler", c2: "Satış & Kiralama", c3: "Yedek Parça" },
     stats: { title: "20 yılı aşkın mükemmellik.", desc: "Tesisinize özel teknik servis hizmetleri.", s1: "Proje", s2: "Müşteri", s3: "Uzman", s4: "Ülke" },
     partners: { title: "Küresel Erişim", desc: "Bu bölgelerdeki sağlık liderlerine hizmet vermekten gurur duyuyoruz." },
@@ -143,7 +155,19 @@ export const translations = {
           "Şirket içinde ve dışında çevre ile ilgili eğitim ve bilinçlendirme faaliyetleri organize etmek,",
           "Sürekli gelişmeyi sağlamak."
         ],
-        desc: "Kalite ve çevre sorumluluğunda uluslararası standartlara bağlılık."
+        iso45001: "ISO 45001:2018 İş Sağlığı ve Güvenliği",
+        iso45001_desc: "Güvenli ve sağlıklı bir çalışma ortamı sağlamak için:",
+        iso45001_items: [
+          "İş sağlığı ve güvenliği risklerini tespit etmek ve en aza indirmek,",
+          "Tüm geçerli yasal ve düzenleyici gerekliliklere uymak,",
+          "Tüm çalışanlara sürekli eğitim ve farkındalık sağlamak,",
+          "İşle ilgili yaralanma ve hastalıkları önlemek,",
+          "İş sağlığı ve güvenliği performansımızı sürekli iyileştirmek."
+        ],
+        desc: "Kalite ve çevre sorumluluğunda uluslararası standartlara bağlılık.",
+        certsTitle: "Sertifikalarımız",
+        certsDesc: "Uluslararası sertifikalarımızı indirin ve doğrulayın.",
+        viewCert: "Sertifikayı Görüntüle"
       }
     },
     about: { badge: "Yıllık Deneyim", sub: "Biz Kimiz", title: "Sağlık Hizmetlerini Güçlendiriyoruz", desc1: "Klinik mükemmellikte stratejik ortağınızız.", desc2: "Montaj ve demontaj konularında uzman kadro.", f1: "Uzmanlık", f1d: "Sertifikalı ekip.", f2: "Destek", f2d: "7/24 hizmet." },
@@ -157,7 +181,7 @@ export const translations = {
       office: { title: "Ofis Bilgileri", loc: "Konum", mail: "E-posta", supp: "7/24 Destek" },
       faq: {
         title: "Sıkça Sorulan Sorular",
-        q1: "Hangi bölgelere hizmet veriyorsunuz?", a1: "Öncelikle İskandinavya ve Kuzey Avrupa'ya hizmet veriyoruz, ancak talep üzerine küresel kurulumları da gerçekleştiriyoruz.",
+        q1: "Hangi bölgelere hizmet veriyorsunuz?", a1: "Öncelikle Türkiye ve Dünya genelinde hizmet veriyoruz, talep üzerine küresel kurulumları da gerçekleştiriyoruz.",
         q2: "Söküm işlemi ne kadar sürer?", a2: "Tıbbi sistemin (BT, MR vb.) karmaşıklığına bağlı olarak genellikle 2 ila 5 iş günü sürer.",
         q3: "Lojistiğe sigorta dahil mi?", a3: "Evet, tüm nakliye ve lojistik hizmetlerimiz, üst düzey tıbbi cihazlar için kapsamlı sigortayı içerir."
       }
@@ -217,7 +241,7 @@ export const translations = {
   },
   de: {
     nav: { solutions: "Lösungen", serviceSolutions: "Service Lösungen", installDismantling: "Montage / Demontage", installation: "Montage", dismantling: "Demontage", salesRental: "Verkauf & Vermietung", veterinary: "Veterinär", medicalDevices: "Medizinische Geräte", parts: "Ersatzteile", about: "Über uns", contact: "Kontakt", btn: "Kontakt", privacy: "Datenschutz" },
-    hero: { title1: "Ihr Anbieter für", title2: "Hochwertige", title3: "Medizintechnik", desc: "Montage, Demontage und Vermietung für Kliniken in Skandinavien.", btn: "Leistungen" },
+    hero: { title1: "Ihr Anbieter für", title2: "Hochwertige", title3: "Medizintechnik", desc: "Montage, Demontage und Vermietung für Kliniken in der Türkei und weltweit.", btn: "Leistungen" },
     cards: { c1: "Lösungen", c2: "Verkauf & Vermietung", c3: "Ersatzteile" },
     stats: { title: "20+ Jahre Exzellenz.", desc: "Technische Dienstleistungen für Ihre Klinik.", s1: "Projekte", s2: "Kunden", s3: "Team", s4: "Länder" },
     partners: { title: "Globale Reichweite", desc: "Stolz darauf, Gesundheitsführer in diesen Regionen zu bedienen." },
@@ -251,7 +275,19 @@ export const translations = {
           "To organize environmental training and awareness activities inside and outside the company,",
           "To ensure continuous improvement."
         ],
-        desc: "Verpflichtung zu internationalen Standards in Qualität und Umweltverantwortung."
+        iso45001: "ISO 45001:2018 Arbeitssicherheit und Gesundheitsschutz",
+        iso45001_desc: "To ensure a safe and healthy working environment and in this context:",
+        iso45001_items: [
+          "To identify and minimize occupational health and safety risks,",
+          "To comply with all applicable legal and regulatory requirements,",
+          "To provide continuous training and awareness to all employees,",
+          "To prevent work-related injuries and illnesses,",
+          "To continuously improve our occupational health and safety performance."
+        ],
+        desc: "Verpflichtung zu internationalen Standards in Qualität und Umweltverantwortung.",
+        certsTitle: "Unsere Zertifikate",
+        certsDesc: "Laden Sie unsere internationalen Zertifizierungen herunter und überprüfen Sie diese.",
+        viewCert: "Zertifikat ansehen"
       }
     },
     about: { badge: "Erfahrung", sub: "Über uns", title: "Healthcare stärken", desc1: "Ihr Partner für klinische Exzellenz.", desc2: "Experten für Montage und Demontage.", f1: "Expertise", f1d: "Zertifiziertes Team.", f2: "Support", f2d: "24/7 Service." },
@@ -265,7 +301,7 @@ export const translations = {
       office: { title: "Büroinfo", loc: "Standort", mail: "E-Mail", supp: "24/7 Support" },
       faq: {
         title: "Häufig gestellte Fragen",
-        q1: "Welche Regionen bedienen Sie?", a1: "Wir bedienen hauptsächlich Skandinavien und Nordeuropa, führen aber auf Anfrage auch weltweite Installationen durch.",
+        q1: "Welche Regionen bedienen Sie?", a1: "Wir bedienen hauptsächlich die Türkei und weltweit, führen aber auf Anfrage auch globale Installationen durch.",
         q2: "Wie lange dauert ein Abbau?", a2: "Je nach Komplexität des medizinischen Systems (CT, MRT usw.) dauert es in der Regel zwischen 2 und 5 Werktagen.",
         q3: "Ist eine Versicherung in der Logistik enthalten?", a3: "Ja, alle unsere Transport- und Logistikdienstleistungen beinhalten eine umfassende Versicherung für hochwertige medizinische Geräte."
       }
@@ -325,7 +361,7 @@ export const translations = {
   },
   es: {
     nav: { solutions: "Soluciones", serviceSolutions: "Soluciones de Servicio", installDismantling: "Instalación / Desmontaje", installation: "Instalación", dismantling: "Desmontaje", salesRental: "Ventas y Alquiler", veterinary: "Veterinario", medicalDevices: "Dispositivos Médicos", parts: "Repuestos", about: "Nosotros", contact: "Contacto", btn: "Contacto", privacy: "Privacidad" },
-    hero: { title1: "Su proveedor de", title2: "Alta Calidad", title3: "Médica", desc: "Instalación, desmontaje y alquiler para centros sanitarios en Escandinavia.", btn: "Servicios" },
+    hero: { title1: "Su proveedor de", title2: "Alta Calidad", title3: "Médica", desc: "Instalación, desmontaje y alquiler para centros sanitarios en Turquía y a nivel mundial.", btn: "Servicios" },
     cards: { c1: "Soluciones", c2: "Ventas y Alquiler", c3: "Repuestos" },
     stats: { title: "20+ años de excelencia.", desc: "Servicios técnicos a medida para su centro.", s1: "Proyectos", s2: "Clientes", s3: "Equipo", s4: "Países" },
     partners: { title: "Alcance Global", desc: "Orgullosos de servir a líderes de la salud en estas cinco regiones." },
@@ -359,7 +395,19 @@ export const translations = {
           "To organize environmental training and awareness activities inside and outside the company,",
           "To ensure continuous improvement."
         ],
-        desc: "Compromiso con estándares internacionales en calidad y responsabilidad ambiental."
+        iso45001: "ISO 45001:2018 Salud y Seguridad Ocupacional",
+        iso45001_desc: "To ensure a safe and healthy working environment and in this context:",
+        iso45001_items: [
+          "To identify and minimize occupational health and safety risks,",
+          "To comply with all applicable legal and regulatory requirements,",
+          "To provide continuous training and awareness to all employees,",
+          "To prevent work-related injuries and illnesses,",
+          "To continuously improve our occupational health and safety performance."
+        ],
+        desc: "Compromiso con estándares internacionales en calidad y responsabilidad ambiental.",
+        certsTitle: "Nuestros Certificados",
+        certsDesc: "Descargue y verifique nuestras certificaciones internacionales.",
+        viewCert: "Ver Certificado"
       }
     },
     about: { badge: "Experiencia", sub: "Nosotros", title: "Potenciando la salud", desc1: "Socio estratégico en excelencia clínica.", desc2: "Expertos en instalación y desmontaje.", f1: "Experiencia", f1d: "Equipo certificado.", f2: "Soporte", f2d: "Servicio 24/7." },
@@ -373,7 +421,7 @@ export const translations = {
       office: { title: "Información de la oficina", loc: "Ubicación", mail: "Correo electrónico", supp: "Soporte 24/7" },
       faq: {
         title: "Preguntas frecuentes",
-        q1: "¿Qué regiones atienden?", a1: "Servimos principalmente a Escandinavia y el norte de Europa, pero manejamos instalaciones globales bajo pedido.",
+        q1: "¿Qué regiones atienden?", a1: "Servimos principalmente a Turquía y a nivel mundial, gestionando instalaciones globales bajo pedido.",
         q2: "¿Cuánto dura un desmontaje?", a2: "Dependiendo de la complejidad del sistema médico (TC, resonancia magnética, etc.), suele tardar entre 2 y 5 días laborables.",
         q3: "¿El seguro está incluido en la logística?", a3: "Sí, todos nuestros servicios de transporte y logística incluyen un seguro a todo riesgo para dispositivos médicos de alta gama."
       }
@@ -433,7 +481,7 @@ export const translations = {
   },
   ru: {
     nav: { solutions: "Решения", serviceSolutions: "Сервисные решения", installDismantling: "Монтаж / Демонтаж", installation: "Монтаж", dismantling: "Демонтаж", salesRental: "Продажа и Аренда", veterinary: "Ветеринария", medicalDevices: "Медицинские устройства", parts: "Запчасти", about: "О нас", contact: "Контакт", btn: "Связаться", privacy: "Приватность" },
-    hero: { title1: "Ваш поставщик", title2: "высококачественных", title3: "решений", desc: "Монтаж, демонтаж и аренда для медицинских учреждений в Скандинавии.", btn: "Услуги" },
+    hero: { title1: "Ваш поставщик", title2: "высококачественных", title3: "решений", desc: "Монтаж, демонтаж и аренда для медицинских учреждений в Турции и по всему миру.", btn: "Услуги" },
     cards: { c1: "Решения", c2: "Продажа и Аренда", c3: "Запчасти" },
     stats: { title: "20+ лет опыта.", desc: "Технические услуги для вашего учреждения.", s1: "Проекты", s2: "Клиенты", s3: "Команда", s4: "Страны" },
     partners: { title: "Глобальный охват", desc: "С гордостью обслуживаем лидеров здравоохранения в этих регионах." },
@@ -467,7 +515,19 @@ export const translations = {
           "To organize environmental training and awareness activities inside and outside the company,",
           "To ensure continuous improvement."
         ],
-        desc: "Приверженность международным стандартам в качестве и экологической ответственности."
+        iso45001: "ISO 45001:2018 Охрана труда и безопасность",
+        iso45001_desc: "To ensure a safe and healthy working environment and in this context:",
+        iso45001_items: [
+          "To identify and minimize occupational health and safety risks,",
+          "To comply with all applicable legal and regulatory requirements,",
+          "To provide continuous training and awareness to all employees,",
+          "To prevent work-related injuries and illnesses,",
+          "To continuously improve our occupational health and safety performance."
+        ],
+        desc: "Приверженность международным стандартам в качестве и экологической ответственности.",
+        certsTitle: "Наши сертификаты",
+        certsDesc: "Загрузите и проверьте наши международные сертификаты.",
+        viewCert: "Просмотреть сертификат"
       }
     },
     about: { badge: "Опыт", sub: "О нас", title: "Развитие медицины", desc1: "Ваш партнер в клиническом совершенстве.", desc2: "Эксперты в монтаже и демонтаже.", f1: "Экспертиза", f1d: "Сертифицированная команда.", f2: "Поддержка", f2d: "24/7 сервис." },
@@ -481,7 +541,7 @@ export const translations = {
       office: { title: "Информация об офисе", loc: "Местоположение", mail: "Электронная почта", supp: "Круглосуточная поддержка" },
       faq: {
         title: "Часто задаваемые вопросы",
-        q1: "Какие регионы вы обслуживаете?", a1: "В основном мы обслуживаем Скандинавию и Северную Европу, но по запросу выполняем глобальные установки.",
+        q1: "Какие регионы вы обслуживаете?", a1: "В основном мы обслуживаем Турцию и весь мир, но по запросу выполняем глобальные установки.",
         q2: "Сколько времени занимает демонтаж?", a2: "В зависимости от сложности медицинской системы (КТ, МРТ и т. д.), это обычно занимает от 2 до 5 рабочих дней.",
         q3: "Включена ли страховка в логистику?", a3: "Да, все наши транспортные и логистические услуги включают полное страхование дорогостоящего медицинского оборудования."
       }
