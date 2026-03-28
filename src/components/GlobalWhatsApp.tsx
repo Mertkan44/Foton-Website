@@ -11,7 +11,7 @@ export default function GlobalWhatsApp() {
 
     return (
         <Link
-            href="https://wa.me/905000000000"
+            href="https://wa.me/905434419992"
             target="_blank"
             className="fixed bottom-6 right-6 z-50 group"
         >

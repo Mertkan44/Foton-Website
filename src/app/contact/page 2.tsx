@@ -105,7 +105,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.supp}</p>
-                    <p className="text-xl font-bold">+90 543 441 99 92</p>
+                    <p className="text-xl font-bold">+45 00 00 00 00</p>
                   </div>
                 </div>
               </FadeIn>
