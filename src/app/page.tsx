@@ -89,18 +89,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!videoRef.current) return;
-
-    videoRef.current.defaultMuted = true;
-    videoRef.current.muted = true;
-    videoRef.current.setAttribute("playsinline", "true");
-    videoRef.current.setAttribute("webkit-playsinline", "true");
-    videoRef.current.setAttribute("controls", "false");
-    videoRef.current.controls = false;
-
-    const playPromise = videoRef.current.play();
-    if (playPromise !== undefined) {
-      playPromise.catch((error) => console.log("Video autoplay failed:", error));
-    }
+    videoRef.current.play().catch(() => {});
   }, []);
 
   const cards = [
@@ -130,6 +119,8 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="none"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 h-full w-full object-cover pointer-events-none"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -144,6 +135,8 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="none"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
