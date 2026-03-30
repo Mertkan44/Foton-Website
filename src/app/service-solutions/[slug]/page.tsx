@@ -5,29 +5,35 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 // Map slugs to image filenames
-const imageMap: Record<string, string> = {
+const imageMap = {
     mr: "mr.png",
     angio: "angio.png",
     ct: "ct.png",
     nuclear: "nuclear.png",
     integrated: "integrated.png",
-};
+} as const;
+
+type ServiceDetailId = keyof typeof imageMap;
 
 export default function ServiceDetail() {
     const { lang } = useLanguage();
     const params = useParams();
     const slug = params?.slug as string;
+    const localizedTranslations = translations[lang] as typeof translations.en;
+    const servicePage = localizedTranslations.servicePage;
+    const isServiceSlug = slug in imageMap;
+    const serviceId = isServiceSlug ? (slug as ServiceDetailId) : undefined;
 
-    // @ts-ignore
-    const serviceData = translations[lang as keyof typeof translations].servicePage[slug];
-    // @ts-ignore
-    const btnText = translations[lang as keyof typeof translations].contact.btn;
+    const serviceData = serviceId ? servicePage[serviceId] : undefined;
+    const btnText = localizedTranslations.contact.btn;
 
     if (!serviceData) {
         return <div className="min-h-screen bg-slate-50 flex items-center justify-center">Service not found</div>;
     }
 
-    const imageSrc = `/images/services/${imageMap[slug] || "mr.png"}`; // Fallback
+    const imageSrc = `/images/services/${serviceId ? imageMap[serviceId] : "mr.png"}`;
+    const serviceDescription =
+        "desc" in serviceData ? (serviceData as { desc?: string }).desc : undefined;
 
     return (
         <main className="min-h-screen bg-slate-50">
@@ -65,9 +71,9 @@ export default function ServiceDetail() {
                         <div className="lg:w-1/2 p-10 lg:p-16 flex flex-col justify-center">
                             <h2 className="text-2xl font-bold text-[#1e293b] mb-8">Service Details</h2>
 
-                            {serviceData.desc ? (
+                            {serviceDescription ? (
                                 <p className="text-lg text-slate-600 mb-8 leading-relaxed font-medium">
-                                    {serviceData.desc}
+                                    {serviceDescription}
                                 </p>
                             ) : null}
 

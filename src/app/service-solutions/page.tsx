@@ -6,17 +6,18 @@ import Link from "next/link";
 
 // Define mappings for display
 const services = [
-    { id: 'mr', img: '/images/services/mr.png' },
     { id: 'angio', img: '/images/services/angio.png' },
-    { id: 'ct', img: '/images/services/ct.png' },
+    { id: 'mr', img: '/images/services/ct.png' },
+    { id: 'ct', img: '/images/services/mr.png' },
     { id: 'nuclear', img: '/images/services/nuclear.png' },
     { id: 'integrated', img: '/images/services/integrated.png' },
-];
+ ] as const;
+
+type ServiceId = (typeof services)[number]["id"];
 
 export default function ServiceSolutions() {
     const { lang } = useLanguage();
-    // @ts-ignore
-    const t = translations[lang as keyof typeof translations].servicePage;
+    const t = (translations[lang] as typeof translations.en).servicePage;
 
     return (
         <main className="min-h-screen bg-slate-50">
@@ -41,8 +42,9 @@ export default function ServiceSolutions() {
                     <div className="flex flex-wrap justify-center gap-8">
 
                         {services.map((service) => {
-                            // @ts-ignore
-                            const serviceInfo = t[service.id];
+                            const serviceInfo = t[service.id as ServiceId];
+                            const serviceDescription =
+                                "desc" in serviceInfo ? serviceInfo.desc : undefined;
                             return (
                                 <Link key={service.id} href={`/service-solutions/${service.id}`} className="group block w-full md:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]">
                                     <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform hover:-translate-y-2">
@@ -69,7 +71,7 @@ export default function ServiceSolutions() {
                                                 {serviceInfo.title}
                                             </h3>
                                             <p className="text-slate-500 text-sm mb-6 line-clamp-3">
-                                                {serviceInfo.desc || "Click to view comprehensive service details, technical specifications, and support options."}
+                                                {serviceDescription || "Click to view comprehensive service details, technical specifications, and support options."}
                                             </p>
 
                                             <div className="mt-auto flex items-center font-bold text-sm text-[#0054a6]">

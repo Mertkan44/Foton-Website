@@ -9,12 +9,13 @@ const services = [
     { id: 'logistics', img: '/images/services/logistics.png' },
     { id: 'planning', img: '/images/services/planning.png' },
     { id: 'rf', img: '/images/services/rf.png' },
-];
+ ] as const;
+
+type InstallationServiceId = keyof typeof translations.en.installPage.services;
 
 export default function InstallationPage() {
     const { lang } = useLanguage();
-    // @ts-ignore
-    const t = translations[lang].installPage;
+    const t = (translations[lang] as typeof translations.en).installPage;
 
     return (
         <main className="min-h-screen bg-slate-50">
@@ -42,8 +43,7 @@ export default function InstallationPage() {
                     <div className="space-y-20">
 
                         {services.map((service, idx) => {
-                            // @ts-ignore
-                            const serviceInfo = t.services && t.services[service.id];
+                            const serviceInfo = t.services[service.id as InstallationServiceId];
                             if (!serviceInfo) return null;
 
                             const isEven = idx % 2 === 0;
@@ -74,7 +74,6 @@ export default function InstallationPage() {
                                         </p>
 
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                            {/* @ts-ignore */}
                                             {serviceInfo.items.map((item, i) => (
                                                 <li key={i} className="flex items-center gap-3">
                                                     <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-[#0054a6] shrink-0">

@@ -11,8 +11,7 @@ interface ComingSoonProps {
 
 export default function ComingSoon({ pageTitle }: ComingSoonProps) {
     const { lang } = useLanguage();
-    // @ts-ignore
-    const t = translations[lang];
+    const t = translations[lang] as typeof translations.en;
 
     return (
         <div className="min-h-screen bg-[#fdfbf7] flex flex-col items-center justify-center relative overflow-hidden pt-20">

@@ -5,8 +5,7 @@ import { translations } from "@/utils/translations";
 
 export default function SalesRentalPage() {
     const { lang } = useLanguage();
-    // @ts-ignore
-    const t = translations[lang];
+    const t = translations[lang] as typeof translations.en;
 
     return <ComingSoon pageTitle={t.nav.salesRental} />;
 }

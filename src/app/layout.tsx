@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import GlobalWhatsApp from "@/components/GlobalWhatsApp";
@@ -7,12 +6,6 @@ import CookieConsent from "@/components/CookieConsent";
 import Footer from "@/components/Footer";
 import HtmlLangUpdater from "@/components/HtmlLangUpdater";
 import { LanguageProvider } from "@/components/LanguageContext";
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-jost",
-});
 
 export const metadata: Metadata = {
   title: "Foton Healthcare Solutions",
@@ -27,7 +20,8 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${jost.className} antialiased bg-[#fcfcfc] text-[#1e293b]`}
+        className="antialiased bg-[#fcfcfc] text-[#1e293b]"
+        style={{ fontFamily: '"Avenir Next", Avenir, "Segoe UI", sans-serif' }}
       >
         <LanguageProvider>
           <HtmlLangUpdater />

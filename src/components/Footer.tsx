@@ -86,7 +86,7 @@ export default function Footer() {
                         </h4>
                         <p className="text-slate-400 mb-4 italic">{t.footer.support}</p>
                         <p className="text-[#00a9e0] font-black text-xl leading-none">
-                            +45 00 00 00 00
+                            +90 543 441 99 92
                         </p>
                     </div>
                 </div>
