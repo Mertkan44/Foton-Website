@@ -91,7 +91,6 @@ export default function Home() {
           muted
           playsInline
           preload="none"
-          poster="/hero-poster.jpg"
           className="absolute inset-0 h-full w-full object-cover pointer-events-none"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -107,7 +106,6 @@ export default function Home() {
           muted
           playsInline
           preload="none"
-          poster="/hero-poster.jpg"
           className="absolute inset-0 h-full w-full object-cover"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
