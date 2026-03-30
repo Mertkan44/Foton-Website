@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage, Lang } from "@/components/LanguageContext";
@@ -40,9 +40,13 @@ const Header = () => {
 
   const langs: Lang[] = ["en", "tr", "de", "es", "ru"];
 
-  const toggleSubMenu = (menuName: string) => {
-    setMobileSubMenu(mobileSubMenu === menuName ? null : menuName);
-  };
+  const toggleSubMenu = useCallback((menuName: string) => {
+    setMobileSubMenu((prev) => (prev === menuName ? null : menuName));
+  }, []);
+
+  const handleLangChange = useCallback((l: Lang) => {
+    setLang(l);
+  }, [setLang]);
 
   return (
     <header className="fixed w-full z-[100] pt-4 md:pt-10 px-5 md:px-6 transition-all duration-500">
@@ -84,7 +88,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <div className="flex gap-1 bg-slate-100/50 p-1 rounded-lg border">
             {langs.map((l) => (
-              <button key={l} onClick={() => setLang(l)} className={`px-2 py-1 rounded-md text-[10px] font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>{l}</button>
+              <button key={l} onClick={() => handleLangChange(l)} className={`px-2 py-1 rounded-md text-[10px] font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>{l}</button>
             ))}
           </div>
           <Link href="/contact" className="bg-[#0054a6] text-white px-8 py-4 rounded-full font-bold text-[16px] shadow-xl hover:bg-[#1e293b] transition-all">{t.btn}</Link>
@@ -114,7 +118,7 @@ const Header = () => {
             {/* Dil Seçim */}
             <div className="flex justify-center gap-2 mb-8 flex-wrap">
               {langs.map((l) => (
-                <button key={l} onClick={() => setLang(l)} className={`px-4 py-2 rounded-xl text-sm font-black uppercase transition-all shadow-sm ${lang === l ? "bg-[#0054a6] text-white" : "bg-white text-slate-400 border border-slate-100"}`}>{l}</button>
+                <button key={l} onClick={() => handleLangChange(l)} className={`px-4 py-2 rounded-xl text-sm font-black uppercase transition-all shadow-sm ${lang === l ? "bg-[#0054a6] text-white" : "bg-white text-slate-400 border border-slate-100"}`}>{l}</button>
               ))}
             </div>
 
