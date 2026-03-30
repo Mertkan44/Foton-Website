@@ -81,7 +81,7 @@ export default function ContactPage() {
                 <div className="space-y-10">
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.loc}</p>
-                    <p className="text-xl font-bold">Copenhagen, Denmark</p>
+                    <p className="text-xl font-bold">Orhangazi mh. 1646 sk. No:42 Esenyurt/İstanbul</p>
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.mail}</p>
