@@ -205,6 +205,7 @@ export default function Home() {
                     src={card.img}
                     alt={card.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0054a6]/90 via-transparent to-transparent" />
@@ -272,7 +273,7 @@ export default function Home() {
             <div className="relative w-full lg:w-[40%]">
               <FadeIn>
                 <div className="relative h-[350px] w-full overflow-hidden rounded-[40px] shadow-2xl md:h-[500px] md:rounded-[50px]">
-                  <Image src="/img-solutions.jpg" alt="About" fill className="object-cover" />
+                  <Image src="/img-solutions.jpg" alt="About" fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#0054a6]/20 to-transparent" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 z-10 hidden rounded-[25px] bg-[#0054a6] p-6 text-white shadow-2xl md:block md:rounded-[35px] md:p-10">

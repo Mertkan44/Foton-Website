@@ -103,6 +103,7 @@ export default function AboutPage() {
                                             src="/img-about-team.jpg"
                                             alt="Our Story"
                                             fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                             className="object-cover"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b]/40 to-transparent pointer-events-none" />
