@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageContext";
 import { translations } from "@/utils/translations";
+import FadeIn from "@/components/FadeIn";
 
 const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
   const [count, setCount] = useState(0);
@@ -51,36 +52,6 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
   );
 };
 
-const FadeIn: React.FC<{ children: React.ReactNode; delay?: number }> = ({
-  children,
-  delay = 0,
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.05 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-    >
-      {children}
-    </div>
-  );
-};
 
 export default function Home() {
   const { lang } = useLanguage();
