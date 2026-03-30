@@ -104,8 +104,8 @@ export default function Home() {
   }, []);
 
   const cards = [
-    { title: t.cards.c1, img: "/img-solutions.jpg", href: "/equipment" },
-    { title: t.cards.c2, img: "/img-rental.jpg", href: "/rental" },
+    { title: t.cards.c1, img: "/img-solutions.jpg", href: "/service-solutions" },
+    { title: t.cards.c2, img: "/img-rental.jpg", href: "/sales-rental" },
     { title: t.cards.c3, img: "/img-parts.jpg", href: "/parts" },
   ];
 
