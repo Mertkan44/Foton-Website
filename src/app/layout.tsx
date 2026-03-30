@@ -18,11 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
-      <body
-        className="antialiased bg-[#fcfcfc] text-[#1e293b]"
-        style={{ fontFamily: '"Avenir Next", Avenir, "Segoe UI", sans-serif' }}
-      >
+    <html lang="en">
+      <body className="antialiased bg-[#fcfcfc] text-[#1e293b]">
         <LanguageProvider>
           <HtmlLangUpdater />
           {/* Menü */}
