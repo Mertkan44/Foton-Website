@@ -56,11 +56,18 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
 export default function Home() {
   const { lang } = useLanguage();
   const t = translations[lang];
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = useState(false);
 
   useEffect(() => {
-    if (!videoRef.current) return;
-    videoRef.current.play().catch(() => {});
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (reducedMotion.matches) return;
+
+    const timeoutId = window.setTimeout(() => {
+      setShouldLoadHeroVideo(true);
+    }, 1000);
+
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const cards = [
@@ -84,32 +91,53 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-[#fdfbf7] overflow-x-hidden">
       <div className="absolute top-0 left-0 z-0 h-[70vh] w-full overflow-hidden lg:hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          className="absolute inset-0 h-full w-full object-cover pointer-events-none"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/hero-poster.jpg"
+          alt="Foton Healthcare Solutions hero"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {shouldLoadHeroVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/hero-poster.jpg"
+            className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+        ) : null}
         <div className="absolute inset-0 z-10 bg-black/40" />
         <div className="absolute bottom-0 left-0 right-0 z-20 h-[30vh] bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7] via-50% to-transparent pointer-events-none" />
       </div>
 
       <div className="absolute top-0 right-0 z-0 hidden h-[85vh] w-[60%] lg:block">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/hero-poster.jpg"
+          alt="Foton Healthcare Solutions hero"
+          fill
+          priority
+          sizes="60vw"
+          className="object-cover"
+        />
+        {shouldLoadHeroVideo ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/hero-poster.jpg"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+        ) : null}
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#fdfbf7] via-[#fdfbf7]/10 via-10% to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 z-10 h-[450px] bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7]/90 via-15% to-transparent" />
       </div>
@@ -132,7 +160,7 @@ export default function Home() {
           </FadeIn>
           <FadeIn delay={400}>
             <Link
-              href="/equipment"
+              href="/service-solutions"
               className="group flex items-center gap-3 rounded-2xl bg-[#0054a6] px-10 py-5 text-lg font-bold text-white shadow-2xl transition-all hover:bg-[#1e293b]"
             >
               {t.hero.btn}
