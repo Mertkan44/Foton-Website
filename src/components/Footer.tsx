@@ -89,10 +89,10 @@ export default function Footer() {
                             +90 543 441 99 92
                         </p>
                         <a
-                            href="mailto:foton@fotonsc.com"
+                            href="mailto:info@fotonsc.com"
                             className="text-slate-400 hover:text-[#00a9e0] transition-colors text-sm"
                         >
-                            foton@fotonsc.com
+                            info@fotonsc.com
                         </a>
                     </div>
                 </div>

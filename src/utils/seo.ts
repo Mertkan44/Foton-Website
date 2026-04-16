@@ -151,13 +151,13 @@ export function getOrganizationStructuredData() {
       name: SITE_NAME,
       url: SITE_URL,
       logo: absoluteUrl("/logo.svg"),
-      email: "foton@fotonsc.com",
+      email: "info@fotonsc.com",
       telephone: "+90 543 441 99 92",
       contactPoint: [
         {
           "@type": "ContactPoint",
           contactType: "customer support",
-          email: "foton@fotonsc.com",
+          email: "info@fotonsc.com",
           telephone: "+90 543 441 99 92",
           areaServed: ["TR", "EU", "Middle East"],
           availableLanguage: ["en", "tr", "de", "es", "ru"],

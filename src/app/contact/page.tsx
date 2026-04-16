@@ -1,13 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageContext";
 import { translations } from "@/utils/translations";
 import FadeIn from "@/components/FadeIn";
 
+type FormStatus = "idle" | "sending" | "success" | "error";
+
 export default function ContactPage() {
   const { lang } = useLanguage();
   const t = translations[lang as keyof typeof translations];
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<FormStatus>("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (!res.ok) throw new Error("failed");
+      setStatus("success");
+      setName(""); setEmail(""); setSubject(""); setMessage("");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div className="min-h-screen bg-[#fdfbf7]">
@@ -63,17 +88,35 @@ export default function ContactPage() {
             <div className="w-full lg:w-3/5 p-10 md:p-20">
               <FadeIn>
                 <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">{t.contact.form_title}</h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder={t.contact.f_name} className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
-                    <input type="email" placeholder={t.contact.f_mail} className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
+
+                {status === "success" ? (
+                  <div className="flex flex-col items-center justify-center py-16 text-center">
+                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6 shadow-lg">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p className="text-white text-xl font-bold leading-relaxed max-w-sm">{t.contact.form_success}</p>
+                    <button onClick={() => setStatus("idle")} className="mt-8 text-white/60 hover:text-white text-sm font-medium underline underline-offset-4 transition-colors">
+                      {t.contact.btn} ↩
+                    </button>
                   </div>
-                  <input type="text" placeholder={t.contact.f_subj} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
-                  <textarea rows={5} placeholder={t.contact.f_msg} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all resize-none"></textarea>
-                  <button className="bg-[#0054a6] hover:bg-[#00a9e0] text-white font-black py-5 px-12 rounded-2xl shadow-xl transition-all transform hover:-translate-y-1">
-                    {t.contact.btn}
-                  </button>
-                </form>
+                ) : (
+                  <form className="space-y-6" onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <input required type="text" placeholder={t.contact.f_name} value={name} onChange={e => setName(e.target.value)} className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
+                      <input required type="email" placeholder={t.contact.f_mail} value={email} onChange={e => setEmail(e.target.value)} className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
+                    </div>
+                    <input required type="text" placeholder={t.contact.f_subj} value={subject} onChange={e => setSubject(e.target.value)} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all" />
+                    <textarea required rows={5} placeholder={t.contact.f_msg} value={message} onChange={e => setMessage(e.target.value)} className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white outline-none focus:border-[#00a9e0] transition-all resize-none"></textarea>
+                    {status === "error" && (
+                      <p className="text-red-400 font-medium text-sm">{t.contact.form_error}</p>
+                    )}
+                    <button disabled={status === "sending"} className="bg-[#0054a6] hover:bg-[#00a9e0] disabled:opacity-60 disabled:cursor-not-allowed text-white font-black py-5 px-12 rounded-2xl shadow-xl transition-all transform hover:-translate-y-1">
+                      {status === "sending" ? t.contact.form_sending : t.contact.btn}
+                    </button>
+                  </form>
+                )}
               </FadeIn>
             </div>
             {/* Ofis Bilgileri */}
@@ -88,7 +131,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.mail}</p>
-                    <p className="text-xl font-bold">foton@fotonsc.com</p>
+                    <p className="text-xl font-bold">info@fotonsc.com</p>
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.supp}</p>

@@ -62,7 +62,7 @@ export const translations = {
     },
     about: { badge: "Experience", sub: "Who We Are", title: "Empowering Healthcare", desc1: "Strategic partner in clinical excellence.", desc2: "Specializing in installation and dismantling services.", f1: "Expertise", f1d: "Certified team.", f2: "Support", f2d: "24/7 service." },
     contact: {
-      title1: "Let's start", title2: "a conversation.", desc: "Reach out for technical inquiries.", email: "Email", visit: "Visit", f_name: "Name", f_mail: "Email", f_subj: "Subject", f_msg: "Message", btn: "Send", form_title: "Get in touch.", btn_dept: "Contact Department",
+      title1: "Let's start", title2: "a conversation.", desc: "Reach out for technical inquiries.", email: "Email", visit: "Visit", f_name: "Name", f_mail: "Email", f_subj: "Subject", f_msg: "Message", btn: "Send", form_title: "Get in touch.", btn_dept: "Contact Department", form_sending: "Sending...", form_success: "Your message has been sent! We'll get back to you shortly.", form_error: "Something went wrong. Please try again.",
       dept: {
         t_title: "Technical Support", t_desc: "Expert help for all medical equipment issues.",
         s_title: "Sales & Rental", s_desc: "Customized solutions and flexible rental options.",
@@ -118,7 +118,7 @@ export const translations = {
       s4_title: "Data Sharing",
       s4_body: "We do not sell personal data. Information may be shared with trusted service providers only when required to host the website, maintain infrastructure, or deliver requested services, and only under appropriate confidentiality safeguards.",
       s5_title: "Contact",
-      s5_body: "For questions about privacy, data handling, or requests related to your information, please contact us at foton@fotonsc.com or visit our contact page.",
+      s5_body: "For questions about privacy, data handling, or requests related to your information, please contact us at info@fotonsc.com or visit our contact page.",
       contactBtn: "Contact Us"
     },
     installPage: {
@@ -211,7 +211,7 @@ export const translations = {
     },
     about: { badge: "Yıllık Deneyim", sub: "Biz Kimiz", title: "Sağlık Hizmetlerini Güçlendiriyoruz", desc1: "Klinik mükemmellikte stratejik ortağınızız.", desc2: "Montaj ve demontaj konularında uzman kadro.", f1: "Uzmanlık", f1d: "Sertifikalı ekip.", f2: "Destek", f2d: "7/24 hizmet." },
     contact: {
-      title1: "Bir görüşme", title2: "başlatalım.", desc: "Teknik sorularınız için bize ulaşın.", email: "E-posta", visit: "Adres", f_name: "Ad Soyad", f_mail: "E-posta", f_subj: "Konu", f_msg: "Mesaj", btn: "Gönder", form_title: "İletişime Geçin", btn_dept: "Departmanla Görüş",
+      title1: "Bir görüşme", title2: "başlatalım.", desc: "Teknik sorularınız için bize ulaşın.", email: "E-posta", visit: "Adres", f_name: "Ad Soyad", f_mail: "E-posta", f_subj: "Konu", f_msg: "Mesaj", btn: "Gönder", form_title: "İletişime Geçin", btn_dept: "Departmanla Görüş", form_sending: "Gönderiliyor...", form_success: "Mesajınız iletildi! En kısa sürede size geri döneceğiz.", form_error: "Bir hata oluştu. Lütfen tekrar deneyin.",
       dept: {
         t_title: "Teknik Destek", t_desc: "Tüm tıbbi cihaz sorunları için uzman yardımı.",
         s_title: "Satış & Kiralama", s_desc: "Özel çözümler ve esnek kiralama seçenekleri.",
@@ -267,7 +267,7 @@ export const translations = {
       s4_title: "Veri Paylaşımı",
       s4_body: "Kişisel verileri satmıyoruz. Bilgiler; yalnızca web sitesini barındırmak, altyapıyı sürdürmek veya talep edilen hizmetleri sunmak için gerekli olduğunda ve yalnızca uygun gizlilik güvenceleri kapsamında güvenilir hizmet sağlayıcılarla paylaşılabilir.",
       s5_title: "İletişim",
-      s5_body: "Gizlilik, veri işleme veya bilgilerinizle ilgili talepler hakkında sorularınız için foton@fotonsc.com adresinden bize ulaşabilir veya iletişim sayfamızı ziyaret edebilirsiniz.",
+      s5_body: "Gizlilik, veri işleme veya bilgilerinizle ilgili talepler hakkında sorularınız için info@fotonsc.com adresinden bize ulaşabilir veya iletişim sayfamızı ziyaret edebilirsiniz.",
       contactBtn: "İletişime Geç"
     },
     installPage: {
@@ -360,7 +360,7 @@ export const translations = {
     },
     about: { badge: "Erfahrung", sub: "Über uns", title: "Healthcare stärken", desc1: "Ihr Partner für klinische Exzellenz.", desc2: "Experten für Montage und Demontage.", f1: "Expertise", f1d: "Zertifiziertes Team.", f2: "Support", f2d: "24/7 Service." },
     contact: {
-      title1: "Kontaktieren", title2: "Sie uns.", desc: "Wir freuen uns auf Ihre Anfrage.", email: "E-Mail", visit: "Besuch", f_name: "Name", f_mail: "E-Mail", f_subj: "Betreff", f_msg: "Nachricht", btn: "Senden", form_title: "Kontakt aufnehmen", btn_dept: "Abteilung kontaktieren",
+      title1: "Kontaktieren", title2: "Sie uns.", desc: "Wir freuen uns auf Ihre Anfrage.", email: "E-Mail", visit: "Besuch", f_name: "Name", f_mail: "E-Mail", f_subj: "Betreff", f_msg: "Nachricht", btn: "Senden", form_title: "Kontakt aufnehmen", btn_dept: "Abteilung kontaktieren", form_sending: "Wird gesendet...", form_success: "Ihre Nachricht wurde gesendet! Wir melden uns bald bei Ihnen.", form_error: "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
       dept: {
         t_title: "Technischer Support", t_desc: "Expertenhilfe bei allen medizinischen Geräteproblemen.",
         s_title: "Verkauf & Vermietung", s_desc: "Maßgeschneiderte Lösungen und flexible Mietoptionen.",
@@ -416,7 +416,7 @@ export const translations = {
       s4_title: "Datenweitergabe",
       s4_body: "Wir verkaufen keine personenbezogenen Daten. Informationen können nur dann an vertrauenswürdige Dienstleister weitergegeben werden, wenn dies zum Betrieb der Website, zur Infrastrukturpflege oder zur Erbringung angeforderter Dienste erforderlich ist, und nur unter angemessenen Vertraulichkeitsschutzmaßnahmen.",
       s5_title: "Kontakt",
-      s5_body: "Für Fragen zum Datenschutz, zur Datenverarbeitung oder zu Anfragen bezüglich Ihrer Daten wenden Sie sich bitte an foton@fotonsc.com oder besuchen Sie unsere Kontaktseite.",
+      s5_body: "Für Fragen zum Datenschutz, zur Datenverarbeitung oder zu Anfragen bezüglich Ihrer Daten wenden Sie sich bitte an info@fotonsc.com oder besuchen Sie unsere Kontaktseite.",
       contactBtn: "Kontakt aufnehmen"
     },
     installPage: {
@@ -509,7 +509,7 @@ export const translations = {
     },
     about: { badge: "Experiencia", sub: "Nosotros", title: "Potenciando la salud", desc1: "Socio estratégico en excelencia clínica.", desc2: "Expertos en instalación y desmontaje.", f1: "Experiencia", f1d: "Equipo certificado.", f2: "Soporte", f2d: "Servicio 24/7." },
     contact: {
-      title1: "Empecemos", title2: "a hablar.", desc: "Contacte con nosotros para consultas.", email: "Email", visit: "Visita", f_name: "Nombre", f_mail: "Email", f_subj: "Asunto", f_msg: "Mensaje", btn: "Enviar", form_title: "Ponerse en contacto", btn_dept: "Contactar departamento",
+      title1: "Empecemos", title2: "a hablar.", desc: "Contacte con nosotros para consultas.", email: "Email", visit: "Visita", f_name: "Nombre", f_mail: "Email", f_subj: "Asunto", f_msg: "Mensaje", btn: "Enviar", form_title: "Ponerse en contacto", btn_dept: "Contactar departamento", form_sending: "Enviando...", form_success: "¡Su mensaje ha sido enviado! Nos pondremos en contacto pronto.", form_error: "Algo salió mal. Por favor, inténtelo de nuevo.",
       dept: {
         t_title: "Soporte Técnico", t_desc: "Ayuda experta para problemas con equipos médicos.",
         s_title: "Ventas y Alquiler", s_desc: "Soluciones personalizadas y opciones de alquiler flexibles.",
@@ -565,7 +565,7 @@ export const translations = {
       s4_title: "Compartición de Datos",
       s4_body: "No vendemos datos personales. La información puede compartirse con proveedores de servicios de confianza solo cuando sea necesario para alojar el sitio web, mantener la infraestructura o prestar los servicios solicitados, y solo bajo las debidas salvaguardias de confidencialidad.",
       s5_title: "Contacto",
-      s5_body: "Para preguntas sobre privacidad, manejo de datos o solicitudes relacionadas con su información, contáctenos en foton@fotonsc.com o visite nuestra página de contacto.",
+      s5_body: "Para preguntas sobre privacidad, manejo de datos o solicitudes relacionadas con su información, contáctenos en info@fotonsc.com o visite nuestra página de contacto.",
       contactBtn: "Contáctanos"
     },
     installPage: {
@@ -658,7 +658,7 @@ export const translations = {
     },
     about: { badge: "Опыт", sub: "О нас", title: "Развитие медицины", desc1: "Ваш партнер в клиническом совершенстве.", desc2: "Эксперты в монтаже и демонтаже.", f1: "Экспертиза", f1d: "Сертифицированная команда.", f2: "Поддержка", f2d: "24/7 сервис." },
     contact: {
-      title1: "Давайте", title2: "начнем диалог.", desc: "Свяжитесь с нами для консультации.", email: "Email", visit: "Адрес", f_name: "Имя", f_mail: "Email", f_subj: "Тема", f_msg: "Сообщение", btn: "Отправить", form_title: "Связаться", btn_dept: "Связаться с отделом",
+      title1: "Давайте", title2: "начнем диалог.", desc: "Свяжитесь с нами для консультации.", email: "Email", visit: "Адрес", f_name: "Имя", f_mail: "Email", f_subj: "Тема", f_msg: "Сообщение", btn: "Отправить", form_title: "Связаться", btn_dept: "Связаться с отделом", form_sending: "Отправка...", form_success: "Ваше сообщение отправлено! Мы свяжемся с вами в ближайшее время.", form_error: "Что-то пошло не так. Пожалуйста, попробуйте снова.",
       dept: {
         t_title: "Техническая поддержка", t_desc: "Экспертная помощь по всем вопросам медицинского оборудования.",
         s_title: "Продажа и аренда", s_desc: "Индивидуальные решения и гибкие варианты аренды.",
@@ -714,7 +714,7 @@ export const translations = {
       s4_title: "Передача данных",
       s4_body: "Мы не продаём персональные данные. Информация может быть передана надёжным поставщикам услуг только в случае необходимости для размещения веб-сайта, обслуживания инфраструктуры или предоставления запрошенных услуг, и только при наличии надлежащих гарантий конфиденциальности.",
       s5_title: "Контакт",
-      s5_body: "По вопросам конфиденциальности, обработки данных или запросам, связанным с вашей информацией, пожалуйста, свяжитесь с нами по адресу foton@fotonsc.com или посетите нашу страницу контактов.",
+      s5_body: "По вопросам конфиденциальности, обработки данных или запросам, связанным с вашей информацией, пожалуйста, свяжитесь с нами по адресу info@fotonsc.com или посетите нашу страницу контактов.",
       contactBtn: "Связаться с нами"
     },
     installPage: {
