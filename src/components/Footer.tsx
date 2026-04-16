@@ -25,7 +25,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-slate-400">
                             <li>
                                 <Link
-                                    href="/equipment"
+                                    href="/service-solutions"
                                     className="hover:text-[#00a9e0] transition-colors"
                                 >
                                     {t.nav.solutions}
@@ -33,7 +33,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    href="/rental"
+                                    href="/sales-rental"
                                     className="hover:text-[#00a9e0] transition-colors"
                                 >
                                     {t.nav.salesRental}
@@ -85,24 +85,19 @@ export default function Footer() {
                             {t.footer.t3}
                         </h4>
                         <p className="text-slate-400 mb-4 italic">{t.footer.support}</p>
-                        <p className="text-[#00a9e0] font-black text-xl leading-none">
+                        <p className="text-[#00a9e0] font-black text-xl leading-none mb-3">
                             +90 543 441 99 92
                         </p>
+                        <a
+                            href="mailto:foton@fotonsc.com"
+                            className="text-slate-400 hover:text-[#00a9e0] transition-colors text-sm"
+                        >
+                            foton@fotonsc.com
+                        </a>
                     </div>
                 </div>
                 <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-slate-500 text-sm">{t.footer.copy}</p>
-                    <div className="flex gap-6">
-                        {["LinkedIn", "Twitter", "Instagram"].map((social) => (
-                            <Link
-                                key={social}
-                                href="#"
-                                className="text-slate-500 hover:text-white text-sm transition-colors"
-                            >
-                                {social}
-                            </Link>
-                        ))}
-                    </div>
                 </div>
             </div>
         </footer>

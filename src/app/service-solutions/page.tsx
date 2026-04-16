@@ -7,8 +7,8 @@ import Link from "next/link";
 // Define mappings for display
 const services = [
     { id: 'angio', img: '/images/services/angio.png' },
-    { id: 'mr', img: '/images/services/ct.png' },
-    { id: 'ct', img: '/images/services/mr.png' },
+    { id: 'mr', img: '/images/services/mr.png' },
+    { id: 'ct', img: '/images/services/ct.png' },
     { id: 'nuclear', img: '/images/services/nuclear.png' },
     { id: 'integrated', img: '/images/services/integrated.png' },
  ] as const;

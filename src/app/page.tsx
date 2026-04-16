@@ -420,7 +420,7 @@ export default function Home() {
                         <p className="mb-1 text-xs font-bold uppercase tracking-widest text-slate-500">
                           {t.contact.email}
                         </p>
-                        <p className="text-lg font-bold text-white">info@fotonsc.com</p>
+                        <p className="text-lg font-bold text-white">foton@fotonsc.com</p>
                       </div>
                     </div>
                   </div>

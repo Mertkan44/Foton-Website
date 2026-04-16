@@ -42,9 +42,12 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-xl font-bold text-[#1e293b] mb-3">{item.title}</h3>
                   <p className="text-slate-500 text-sm leading-relaxed mb-6 font-medium">{item.desc}</p>
-                  <Link href="mailto:support@fotonsc.com" className="text-[#0054a6] font-bold text-sm flex items-center gap-2 group-hover:underline">
+                  <button
+                    onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                    className="text-[#0054a6] font-bold text-sm flex items-center gap-2 group-hover:underline cursor-pointer"
+                  >
                     {t.contact.btn_dept} <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </Link>
+                  </button>
                 </div>
               </FadeIn>
             ))}
@@ -53,7 +56,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. FORM AND OFFICE INFO */}
-      <section className="py-20 bg-white">
+      <section id="contact-form" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="bg-[#1e293b] rounded-[50px] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
             {/* Form Alanı */}
@@ -85,7 +88,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.mail}</p>
-                    <p className="text-xl font-bold">info@fotonsc.com</p>
+                    <p className="text-xl font-bold">foton@fotonsc.com</p>
                   </div>
                   <div>
                     <p className="text-white/60 font-bold uppercase tracking-widest text-xs mb-2">{t.contact.office?.supp}</p>

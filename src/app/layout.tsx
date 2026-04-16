@@ -6,20 +6,35 @@ import CookieConsent from "@/components/CookieConsent";
 import Footer from "@/components/Footer";
 import HtmlLangUpdater from "@/components/HtmlLangUpdater";
 import { LanguageProvider } from "@/components/LanguageContext";
+import {
+  SITE_NAME,
+  buildMetadata,
+  getOrganizationStructuredData,
+} from "@/utils/seo";
 
-export const metadata: Metadata = {
-  title: "Foton Healthcare Solutions",
-  description: "Modern Sağlık Çözümleri",
-};
+export const metadata: Metadata = buildMetadata({
+  title: SITE_NAME,
+  description:
+    "Medical imaging installation, dismantling, service, spare parts, and rental solutions for healthcare facilities across Turkey and worldwide.",
+  path: "/",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = getOrganizationStructuredData();
+
   return (
     <html lang="en">
       <body className="antialiased bg-[#fcfcfc] text-[#1e293b]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         <LanguageProvider>
           <HtmlLangUpdater />
           {/* Menü */}

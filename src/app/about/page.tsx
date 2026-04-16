@@ -264,7 +264,7 @@ export default function AboutPage() {
                                 </div>
                                 <div className="flex-1 text-center sm:text-left">
                                     <h4 className="text-lg font-bold text-[#1e293b]">EN ISO 13485:2016 — TSE</h4>
-                                    <p className="text-slate-500 text-sm font-medium mt-1">Medical Devices — Quality Management System</p>
+                                    <p className="text-slate-500 text-sm font-medium mt-1">{t.aboutPage.certs.tse_desc}</p>
                                 </div>
                                 <button
                                     onClick={() => setActivePdf({ url: '/api/certificate/tse', title: 'EN ISO 13485:2016 — TSE', accent: '#dc2626' })}
