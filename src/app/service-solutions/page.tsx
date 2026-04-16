@@ -72,11 +72,11 @@ export default function ServiceSolutions() {
                                                 {serviceInfo.title}
                                             </h3>
                                             <p className="text-slate-500 text-sm mb-6 line-clamp-3">
-                                                {serviceDescription || "Click to view comprehensive service details, technical specifications, and support options."}
+                                                {serviceDescription || t.cardDesc}
                                             </p>
 
                                             <div className="mt-auto flex items-center font-bold text-sm text-[#0054a6]">
-                                                View Details <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                                {t.viewDetails} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                                             </div>
                                         </div>
 

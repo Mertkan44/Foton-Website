@@ -80,6 +80,9 @@ export const translations = {
     footer: { desc: "Technical excellence in medical solutions.", t1: "Solutions", t2: "Company", t3: "Support", support: "Available 24/7.", copy: "© 2025 Foton SC. All rights reserved." },
     servicePage: {
       title: "Service Solutions",
+      viewDetails: "View Details",
+      cardDesc: "Click to view comprehensive service details, technical specifications, and support options.",
+      detailsHeading: "Service Details",
       mr: {
         title: "Magnetic Resonance Service Solution",
         items: ["Guidance & Consultancy for Site Planning and Preparation", "Noise control measurements", "RF room preparation, control & installation", "Device installation and dismantling services", "Magnet Shimming, Tuning & Image quality optimization", "Customized service contracts", "Service Level Agreements / Planned Maintenance Contracts", "On-Call Service", "Remote Access Services", "Application Traing", "Technical Training", "Coldhead and compressor repair & replacement", "Magnet quench recovery", "RF coil repair and refurbishment", "Magnetic Resonance (MR) transport", "MRI device evaluation and technical controls"]
@@ -226,6 +229,9 @@ export const translations = {
     footer: { desc: "Medikal çözümlerde teknik mükemmellik.", t1: "Çözümler", t2: "Kurumsal", t3: "Destek", support: "7/24 hizmetinizdeyiz.", copy: "© 2025 Foton SC. Tüm hakları saklıdır." },
     servicePage: {
       title: "Servis Çözümleri",
+      viewDetails: "Detayları Görüntüle",
+      cardDesc: "Kapsamlı servis detaylarını, teknik özellikleri ve destek seçeneklerini görüntülemek için tıklayın.",
+      detailsHeading: "Servis Detayları",
       mr: {
         title: "Manyetik Rezonans Servis Çözümleri",
         items: ["Saha planlanması ve Saha hazırlığında Rehberlik & Danışmanlık Hizmetleri", "Gürültü kontrolü ölçümleri", "RF odası hazırlığı & kontrolü ve montajı", "Cihazların montaj ve demontaj hizmetleri", "Magnet Shimming, Ayarlama, Tuning & Görüntü kalitesi optimasyonu", "Müşterinin istekleri doğrultusunda servis kontratları", "İş Hizmetleri Sözleşmeleri / Planlanmış Bakım Kontratları", "On-Call Servis", "Uzaktan erişim Hizmetleri", "Aplikasyon Eğitimleri", "Teknik eğitimler", "Coldhead and compressor onarımı ve değişimi", "Magnet quench kurtarma", "RF coil tamiri ve yenilenmesi", "Manyetik rezonans (MR) cihazı taşıması", "MRI cihazlarının değerlendirilmesi ve teknik kontrollleri"]
@@ -372,6 +378,9 @@ export const translations = {
     footer: { desc: "Technische Exzellenz in der Medizintechnik.", t1: "Lösungen", t2: "Firma", t3: "Support", support: "24/7 Support.", copy: "© 2025 Foton SC. Alle Rechte vorbehalten." },
     servicePage: {
       title: "Servicelösungen",
+      viewDetails: "Details ansehen",
+      cardDesc: "Klicken Sie hier für umfassende Service-Details, technische Spezifikationen und Support-Optionen.",
+      detailsHeading: "Service-Details",
       mr: {
         title: "Magnetresonanz-Servicelösung",
         items: ["Beratung & Consulting für Standortplanung und -vorbereitung", "Lärmmessungen", "RF-Raumvorbereitung, -kontrolle & -installation", "Geräteinstallations- und Demontagedienste", "Magnet-Shimming, Abstimmung & Bildqualitätsoptimierung", "Maßgeschneiderte Serviceverträge", "Service Level Agreements / Geplante Wartungsverträge", "On-Call Service", "Fernzugriffsdienste", "Anwendungsschulung", "Technische Schulung", "Coldhead- und Kompressorreparatur & -austausch", "Magnet-Quench-Wiederherstellung", "RF-Spulenreparatur und -aufarbeitung", "Magnetresonanz (MR) Transport", "MRT-Gerätebewertung und technische Kontrollen"]
@@ -518,6 +527,9 @@ export const translations = {
     footer: { desc: "Excelencia técnica en soluciones médicas.", t1: "Soluciones", t2: "Empresa", t3: "Soporte", support: "Disponible 24/7.", copy: "© 2025 Foton SC. Todos los derechos reservados." },
     servicePage: {
       title: "Soluciones de Servicio",
+      viewDetails: "Ver Detalles",
+      cardDesc: "Haga clic para ver los detalles completos del servicio, las especificaciones técnicas y las opciones de soporte.",
+      detailsHeading: "Detalles del Servicio",
       mr: {
         title: "Solución de Servicio para Resonancia Magnética",
         items: ["Orientación y Consultoría para Planificación y Preparación del Sitio", "Mediciones de control de ruido", "Preparación, control e instalación de sala RF", "Servicios de instalación y desmontaje de equipos", "Shimming de Imán, Sintonización y optimización de calidad de imagen", "Contratos de servicio personalizados", "Acuerdos de Nivel de Servicio / Contratos de Mantenimiento Planificado", "Servicio On-Call", "Servicios de Acceso Remoto", "Formación en Aplicaciones", "Formación Técnica", "Reparación y reemplazo de Coldhead y compresor", "Recuperación de quench de imán", "Reparación y reacondicionamiento de bobinas RF", "Transporte de Resonancia Magnética (RM)", "Evaluación de equipos MRI y controles técnicos"]
@@ -664,6 +676,9 @@ export const translations = {
     footer: { desc: "Техническое совершенство в медицине.", t1: "Решения", t2: "Компания", t3: "Поддержка", support: "Доступны 24/7.", copy: "© 2025 Foton SC. Все права защищены." },
     servicePage: {
       title: "Сервисные решения",
+      viewDetails: "Подробнее",
+      cardDesc: "Нажмите для просмотра подробных сведений об услуге, технических характеристик и вариантов поддержки.",
+      detailsHeading: "Подробности услуги",
       mr: {
         title: "Сервисное решение для МРТ",
         items: ["Руководство и консультирование по планированию и подготовке площадки", "Измерения шумового контроля", "Подготовка, контроль и монтаж RF-комнаты", "Услуги по установке и демонтажу устройств", "Шиммирование магнита, настройка и оптимизация качества изображения", "Индивидуальные сервисные контракты", "Соглашения об уровне обслуживания / Контракты на плановое техническое обслуживание", "On-Call Сервис", "Услуги удалённого доступа", "Обучение по применению", "Техническое обучение", "Ремонт и замена coldhead и компрессора", "Восстановление после квенча магнита", "Ремонт и восстановление RF-катушек", "Транспортировка МРТ", "Оценка МРТ-оборудования и технические проверки"]

@@ -27,6 +27,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
     const imageSrc = `/images/services/${imageMap[slug]}`;
     const serviceDescription =
         "desc" in serviceData ? (serviceData as { desc?: string }).desc : undefined;
+    const detailsHeading = localizedTranslations.servicePage.detailsHeading;
 
     return (
         <main className="min-h-screen bg-slate-50">
@@ -57,7 +58,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                         </div>
 
                         <div className="flex flex-col justify-center p-10 lg:w-1/2 lg:p-16">
-                            <h2 className="mb-8 text-2xl font-bold text-[#1e293b]">Service Details</h2>
+                            <h2 className="mb-8 text-2xl font-bold text-[#1e293b]">{detailsHeading}</h2>
 
                             {serviceDescription ? (
                                 <p className="mb-8 text-lg font-medium leading-relaxed text-slate-600">
