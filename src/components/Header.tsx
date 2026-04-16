@@ -54,11 +54,11 @@ const Header = () => {
         <Link href="/" className="z-[110] cursor-pointer block"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-12" priority /></Link>
 
         {/* Masaüstü Menü */}
-        <div className="hidden xl:flex items-center gap-10">
+        <div className="hidden xl:flex items-center gap-6">
           {/* Çözümler Dropdown */}
           <div className="relative group cursor-pointer">
-            <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all">
-              {t.solutions} <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            <span className="text-[#1e293b] font-bold text-[15px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
+              {t.solutions} <svg className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </span>
             <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
               <Link href="/service-solutions" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.serviceSolutions}</Link>
@@ -68,8 +68,8 @@ const Header = () => {
 
           {/* Satış ve Kiralama Dropdown */}
           <div className="relative group cursor-pointer">
-            <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all">
-              {t.salesRental} <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            <span className="text-[#1e293b] font-bold text-[15px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
+              {t.salesRental} <svg className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </span>
             <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
               <Link href="/veterinary" className="block px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-[#0054a6] rounded-xl">{t.veterinary}</Link>
@@ -78,20 +78,20 @@ const Header = () => {
           </div>
 
           {menuItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-[#1e293b] font-bold text-[18px] hover:text-[#0054a6] relative group">
+            <Link key={item.href} href={item.href} className="text-[#1e293b] font-bold text-[15px] hover:text-[#0054a6] relative group whitespace-nowrap">
               {item.name} <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-[#0054a6] transition-all group-hover:w-full"></span>
             </Link>
           ))}
         </div>
 
         {/* Dil Seçici */}
-        <div className="hidden xl:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-4">
           <div className="flex gap-1 bg-slate-100/50 p-1 rounded-lg border">
             {langs.map((l) => (
               <button key={l} onClick={() => handleLangChange(l)} className={`px-2 py-1 rounded-md text-[10px] font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>{l}</button>
             ))}
           </div>
-          <Link href="/contact" className="bg-[#0054a6] text-white px-8 py-4 rounded-full font-bold text-[16px] shadow-xl hover:bg-[#1e293b] transition-all">{t.btn}</Link>
+          <Link href="/contact" className="bg-[#0054a6] text-white px-6 py-3 rounded-full font-bold text-[14px] shadow-xl hover:bg-[#1e293b] transition-all whitespace-nowrap">{t.btn}</Link>
         </div>
 
         <button className="xl:hidden p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(!isOpen)}><div className="space-y-1.5"><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span><span className={`block h-0.5 w-7 bg-current ${isOpen ? "opacity-0" : ""}`}></span><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span></div></button>
