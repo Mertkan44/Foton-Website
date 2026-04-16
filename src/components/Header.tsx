@@ -50,14 +50,14 @@ const Header = () => {
 
   return (
     <header className="fixed w-full z-[100] pt-4 md:pt-10 px-5 md:px-6 transition-all duration-500">
-      <nav className={`mx-auto max-w-[1440px] flex justify-between items-center border border-black/5 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-3 2xl:py-6 px-6 md:px-10 rounded-full 2xl:scale-[0.95] scale-100" : "bg-white py-4 2xl:py-7 px-6 md:px-12 rounded-full shadow-md 2xl:scale-100 scale-100"}`}>
-        <Link href="/" className="z-[110] cursor-pointer block"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-12" priority /></Link>
+      <nav className={`mx-auto max-w-[1440px] flex justify-between items-center border border-black/5 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-3 xl:py-5 px-6 md:px-10 rounded-full xl:scale-[0.97] scale-100" : "bg-white py-4 xl:py-6 px-6 md:px-10 rounded-full shadow-md"}`}>
+        <Link href="/" className="z-[110] cursor-pointer block"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-10" priority /></Link>
 
         {/* Masaüstü Menü */}
-        <div className="hidden 2xl:flex items-center gap-10">
+        <div className="hidden xl:flex items-center gap-6">
           {/* Çözümler Dropdown */}
           <div className="relative group cursor-pointer">
-            <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
+            <span className="text-[#1e293b] font-bold text-[16px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
               {t.solutions} <svg className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </span>
             <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
@@ -68,7 +68,7 @@ const Header = () => {
 
           {/* Satış ve Kiralama Dropdown */}
           <div className="relative group cursor-pointer">
-            <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
+            <span className="text-[#1e293b] font-bold text-[16px] flex items-center gap-1 hover:text-[#0054a6] transition-all whitespace-nowrap">
               {t.salesRental} <svg className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
             </span>
             <div className="absolute top-full -left-4 mt-2 w-56 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 duration-300">
@@ -78,23 +78,23 @@ const Header = () => {
           </div>
 
           {menuItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-[#1e293b] font-bold text-[18px] hover:text-[#0054a6] relative group whitespace-nowrap">
+            <Link key={item.href} href={item.href} className="text-[#1e293b] font-bold text-[16px] hover:text-[#0054a6] relative group whitespace-nowrap">
               {item.name} <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-[#0054a6] transition-all group-hover:w-full"></span>
             </Link>
           ))}
         </div>
 
         {/* Dil Seçici */}
-        <div className="hidden 2xl:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-4">
           <div className="flex gap-1 bg-slate-100/50 p-1 rounded-lg border">
             {langs.map((l) => (
               <button key={l} onClick={() => handleLangChange(l)} className={`px-2 py-1 rounded-md text-[10px] font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>{l}</button>
             ))}
           </div>
-          <Link href="/contact" className="bg-[#0054a6] text-white px-8 py-4 rounded-full font-bold text-[16px] shadow-xl hover:bg-[#1e293b] transition-all whitespace-nowrap">{t.btn}</Link>
+          <Link href="/contact" className="bg-[#0054a6] text-white px-6 py-3 rounded-full font-bold text-[14px] shadow-xl hover:bg-[#1e293b] transition-all whitespace-nowrap">{t.btn}</Link>
         </div>
 
-        <button className="2xl:hidden p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(!isOpen)}><div className="space-y-1.5"><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span><span className={`block h-0.5 w-7 bg-current ${isOpen ? "opacity-0" : ""}`}></span><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span></div></button>
+        <button className="xl:hidden p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(!isOpen)}><div className="space-y-1.5"><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span><span className={`block h-0.5 w-7 bg-current ${isOpen ? "opacity-0" : ""}`}></span><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span></div></button>
       </nav>
 
       {/* Mobil Menü */}
