@@ -50,11 +50,11 @@ const Header = () => {
 
   return (
     <header className="fixed w-full z-[100] pt-4 md:pt-10 px-5 md:px-6 transition-all duration-500">
-      <nav className={`mx-auto max-w-[1440px] flex justify-between items-center border border-black/5 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-3 lg:py-6 px-6 md:px-10 rounded-full lg:scale-[0.95] scale-100" : "bg-white py-4 lg:py-7 px-6 md:px-12 rounded-full shadow-md lg:scale-100 scale-100"}`}>
+      <nav className={`mx-auto max-w-[1440px] flex justify-between items-center border border-black/5 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg py-3 xl:py-6 px-6 md:px-10 rounded-full xl:scale-[0.95] scale-100" : "bg-white py-4 xl:py-7 px-6 md:px-12 rounded-full shadow-md xl:scale-100 scale-100"}`}>
         <Link href="/" className="z-[110] cursor-pointer block"><Image src="/logo.svg" alt="Logo" width={140} height={40} className="w-auto h-8 md:h-12" priority /></Link>
 
         {/* Masaüstü Menü */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden xl:flex items-center gap-10">
           {/* Çözümler Dropdown */}
           <div className="relative group cursor-pointer">
             <span className="text-[#1e293b] font-bold text-[18px] flex items-center gap-1 hover:text-[#0054a6] transition-all">
@@ -85,7 +85,7 @@ const Header = () => {
         </div>
 
         {/* Dil Seçici */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-8">
           <div className="flex gap-1 bg-slate-100/50 p-1 rounded-lg border">
             {langs.map((l) => (
               <button key={l} onClick={() => handleLangChange(l)} className={`px-2 py-1 rounded-md text-[10px] font-black uppercase transition-all ${lang === l ? "bg-[#0054a6] text-white shadow-sm" : "text-slate-400 hover:text-slate-600"}`}>{l}</button>
@@ -94,7 +94,7 @@ const Header = () => {
           <Link href="/contact" className="bg-[#0054a6] text-white px-8 py-4 rounded-full font-bold text-[16px] shadow-xl hover:bg-[#1e293b] transition-all">{t.btn}</Link>
         </div>
 
-        <button className="lg:hidden p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(!isOpen)}><div className="space-y-1.5"><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span><span className={`block h-0.5 w-7 bg-current ${isOpen ? "opacity-0" : ""}`}></span><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span></div></button>
+        <button className="xl:hidden p-2 text-[#1e293b] z-[110]" onClick={() => setIsOpen(!isOpen)}><div className="space-y-1.5"><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span><span className={`block h-0.5 w-7 bg-current ${isOpen ? "opacity-0" : ""}`}></span><span className={`block h-0.5 w-7 bg-current transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span></div></button>
       </nav>
 
       {/* Mobil Menü */}
